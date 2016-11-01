@@ -1,0 +1,43 @@
+<?php
+/**
+ * @file
+ * Create by Ted Bowman
+ * Six Mile Tech - Drupal Training
+ * http://www.sixmiletech.com
+ *
+ * This example module shows a very simple example of creating a page callback using hook_menu
+ * Accompanying blog article -  content/never-put-php-basic-page-again
+ *
+ * For further training read about our Intro to Module Development Course
+ * http://www.sixmiletech.com/content/intro-drupal-module-development-1
+ */
+/**
+ * Implements hook_menu().
+ *
+ * @see https://api.drupal.org/api/drupal/modules%21system%21system.api.php/function/hook_menu/7
+ */
+function custompage_menu() {
+  $items = array();
+  /* The keys to the return $items array will be the system paths that are pages
+  * are accessible at.
+  */
+  // This page will be at http://oursite.com/custom-page
+  $items['custom-page'] = array(
+    'title' => 'My page',
+    // 'page callback' must be name of the function which will return the text (or render array) for the page.
+    'page callback' => 'custompage_output',
+    // 'access callback' must be the name of a function that will determine if the current user has access to this page.
+    'access callback' => 'user_access',
+    // 'access arguments' is an array of arguments to the 'access callback'(in our case user_access).
+    'access arguments' => array('access content'),
+  );
+  return $items;
+}
+
+/**
+ * Page Callback for 'custom-page' - add your PHP code here.
+ * @return string
+ */
+function custompage_output() {
+  return 'Hello World';
+}

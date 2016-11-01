@@ -1,0 +1,4 @@
+name = Custom Page (for testing CAS) v3
+description = A custom page v3  so I don't have to paste PHP into a node!
+package = Current Project
+core = 7.x
