@@ -153,21 +153,26 @@ function cas_attributes_list() {
     if (is_array($value)) {
       $html = "";
       foreach ($value as $k => $v) {
+        //drupal_set_message("cas_attrib_admin : ".$v);   //debug JON 161104  //all results are here
         $html .= check_plain($v) . '<br />';
       }
+      //drupal_set_message("cas_attrib_admin html : ".$html);   //debug JON 161104  //all results are here
       $rows[] = array(
         t('[cas:attribute:@attribute]',
           array('@attribute' => drupal_strtolower($attribute))),
         $html
       );
+
     } else {
       $rows[] = array(
         t('[cas:attribute:@attribute]',
           array('@attribute' => drupal_strtolower($attribute))),
         check_plain($value),
       );
+
     }
   }
+//drupal_set_message("cas_attrib_admin print_r rows1 : ".'<pre>'. print_r($rows, true) .'</pre>');   //debug JON 161104  //all results are here
 
   if (empty($rows)) {
     $rows[] = array(

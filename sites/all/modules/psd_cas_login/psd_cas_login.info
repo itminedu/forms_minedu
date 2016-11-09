@@ -1,0 +1,4 @@
+name = psd cas login
+description = A module that parses additional cas attributes and adds authorization custom control 
+core = 7.x
+package = psd_cas_login 

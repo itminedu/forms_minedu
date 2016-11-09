@@ -1,0 +1,21 @@
+<?php
+
+
+function psd_cas_login_cas_user_alter(&$cas_user) {
+    $cas_name = $cas_user['name'];
+    $schcode = null;
+    if(isset($cas_user['attributes']['edupersonorgunitdn:gsnunitcode']))
+        $schcode =$cas_user['attributes']['edupersonorgunitdn:gsnunitcode'];
+ //   $account = user_load_by_name($cas_name);
+    $_SESSION['schcode'] = $schcode;
+/*
+    if (!$account) {
+        // No existing user could be found by CAS username.
+        $_SESSION['schcode'] = $schcode;
+    } else{
+        if($account->status==0){
+            sch_login_casLogout();
+        }
+    }
+    */
+}
