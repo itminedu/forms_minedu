@@ -19,3 +19,21 @@ function psd_cas_login_cas_user_alter(&$cas_user) {
     }
     */
 }
+
+
+function psd_cas_login_cas_attributes_roles_modify(&$user_attributes) {
+    //$cas_attributes = $cas_attributes['name'];
+
+      $attribute = "title";
+      //drupal_set_message("hello from psd_cas_login_cas_attributes_roles_modify  ATTRIBUTE=".$attribute); //debug jon
+      if (!empty($user_attributes[$attribute])) {
+        if (!is_array($user_attributes[$attribute])) {
+          //$cas_user_roles[] = $user_attributes[$attribute];
+            $user_attributes[$attribute]=trim($user_attributes[$attribute]);
+        }
+        else {  //jon : is array What case is this and how to handle this ?
+          //$cas_user_roles = array_merge($cas_user_roles, $user_attributes[$attribute]);
+        }
+      }
+} //end of function psd_cas_login_cas_attributes_roles_modify(&$user_attributes) {
+
