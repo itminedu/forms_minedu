@@ -460,7 +460,7 @@ h1#site-name {
   clear: both;
 }
 #main-menu-links {
-  font-size: 0.929em;
+  font-size: 1.1em;
   margin: 0;
   padding: 0 15px;
 }
@@ -471,8 +471,9 @@ h1#site-name {
   margin: 0 1px;
 }
 #main-menu-links a {
-  color: #333;
+  color: #bd0404;
   background: #ccc;
+  font-weight: bold;
   background: rgba(255, 255, 255, 0.7);
   float: left; /* LTR */
   height: 2.4em;
