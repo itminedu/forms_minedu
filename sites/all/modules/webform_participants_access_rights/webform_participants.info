@@ -1,0 +1,13 @@
+name = Webform Participants
+description = Provides random strings that can be used as codes for accessing a specific webform and sends them to participant mails.(based on webform invitation 7.x-2.4+1-dev)
+core = 7.x
+package = Webform
+dependencies[] = webform
+dependencies[] = token
+dependencies[] = simple_mail
+
+; Information added by Drupal.org packaging script on 2016-07-07
+version = "7.x-1.1b-dev"
+core = "7.x"
+project = "webform_participants"
+datestamp = "1467874441"
