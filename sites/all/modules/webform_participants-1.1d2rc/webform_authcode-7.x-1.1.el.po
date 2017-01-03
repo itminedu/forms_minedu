@@ -1,0 +1,71 @@
+# $Id$
+#
+# Greek translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  webform_authcode.module: n/a
+#  includes/webform_authcode.pages.inc: n/a
+#  webform_authcode.info: n/a
+#  includes/webform_authcode.admin.inc: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2016-12-09 14:13+0200\n"
+"PO-Revision-Date: 2016-12-09 14:13+0200\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Greek <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: webform_authcode.module:24
+msgid  "Protect this form"
+msgstr "Χρήση <b>master password</b> για την φόρμα αυτή."
+
+#: webform_authcode.module:25
+msgid "Do you want to protect this form with an authorization code?"
+msgstr "Θέλετε να προστατέψετε αυτή την φόρμα με έναν κεντρικό κωδικό προσβασής; (Κάθε φορά που αποθηκεύετε την φόρμα να ελέγχετε εαν αυτή η επιλογή έχει "τσεκαριστεί" αυτόματα.)"
+
+#: webform_authcode.module:31 includes/webform_authcode.pages.inc:21
+msgid "Pass phrase"
+msgstr "Κωδικός φόρμας"
+
+#: webform_authcode.module:32
+msgid "Enter the pass phrase to get access to this webform."
+msgstr "Εισάγετε τον κωδικό για να έχετε πρόσβαση στην φόρμα αυτή."
+
+#: webform_authcode.info:0
+msgid  "Webform authcode"
+msgstr "Κεντρικός κωδικός φορμας"
+
+#: webform_authcode.info:0
+msgid  "Add an authorization code to access a webform"
+msgstr "Προσθέστε έναν κεντρικό κωδικό για να έχετε πρόσβαση στην φόρμα."
+
+#: webform_authcode.info:0
+msgid "Webform"
+msgstr "Webform"
+
+#: includes/webform_authcode.admin.inc:17 includes/webform_authcode.pages.inc:56
+msgid "The field pass phrase can't be empty."
+msgstr "Το πεδίο κωδικού δεν μπορεί να είναι κενό."
+
+#: includes/webform_authcode.pages.inc:16
+msgid "This form is protected by a pass phrase. Please enter the the pass phrase provided to you to gain access to the form."
+msgstr "Αυτή η φόρμα χρειάζεται κωδικό (Pass phrase/Μaster password). Παρακαλώ εισάγετε τον κωδικό που σας έχει δοθεί για να αποκτήσετε πρόσβαση στην φόρμα."
+
+#: includes/webform_authcode.pages.inc:24
+msgid "Please enter the pass phrase provided to you."
+msgstr"Παρακαλώ εισάγετε τον κωδικό που σας έχει δοθεί."
+
+#: includes/webform_authcode.pages.inc:29
+msgid "Continue"
+msgstr "Συνέχεια"
+
+#: includes/webform_authcode.pages.inc:61
+msgid "The pass phrase you entered is incorrect. Please note that the pass phrase is case sensitive."
+msgstr "Ο κωδικός που δώσατε είναι λάνθασμένος. Παρακαλώ, ξαναδώστε τον κωδικό."
+

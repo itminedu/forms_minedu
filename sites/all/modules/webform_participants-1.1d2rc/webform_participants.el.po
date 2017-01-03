@@ -1,0 +1,249 @@
+# $Id$
+#
+# Greek translation of Drupal (general)
+# Copyright YEAR NAME <EMAIL@ADDRESS>
+# Generated from files:
+#  webform_participants.module: n/a
+#  webform_participants.info: n/a
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"POT-Creation-Date: 2016-12-07 15:39+0200\n"
+"PO-Revision-Date: 2016-12-07 15:39+0200\n"
+"Last-Translator: NAME <EMAIL@ADDRESS>\n"
+"Language-Team: Greek <EMAIL@ADDRESS>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n!=1);\n"
+
+#: webform_participants.module:75
+msgid "Enable participants_module for this webform"
+msgstr "Ενεργοποίηση participants_module για αυτήν την φόρμα"
+
+#: webform_participants.module:80
+msgid "Save"
+msgstr "Αποθήκευση"
+
+#: webform_participants.module:90
+msgid "Participants mode has been activated. You should now <a href=\"!base_url/node/!nid/participants/generate\">create some Participants invitation codes</a>."
+msgstr "Έχει ενεργοποιηθεί το participants_module. Τώρα πρέπει να <a href=\"!base_url/node/!nid/participants/generate\">δημιουργήσετε μερικούς κωδικούς για τους αποδέκτες</a>."
+
+#: webform_participants.module:110
+msgid "Participant Invite Code"
+msgstr "Ατομικός κωδικός συμμετοχής"
+
+#: webform_participants.module:114
+msgid "Enter your personal invitation code (only applies if the field is not populated yet)."
+msgstr "Εισάγετε τον ατομικό κώδικα συμμετοχής."
+
+#: webform_participants.module:137
+msgid "Participants Invitation mode has been disabled."
+msgstr "Απενεργοποιήθηκε η χρήση κωδικών συμμετοχής"
+
+#: webform_participants.module:163
+msgid "All Participant invitation codes for %node_title"
+msgstr "Όλοι οι ατομικοί κωδικοί συμμετοχής για την φόρμα : %node_title"
+
+#: webform_participants.module:164;47
+msgid "Download Codes"
+msgstr "Κατεβάστε τους κωδικούς σε excel"
+
+#: webform_participants.module:166
+msgid "mail"
+msgstr ""
+
+#: webform_participants.module:166
+msgid "Code"
+msgstr "Κωδικός"
+
+#: webform_participants.module:166
+msgid "used?"
+msgstr "Χρησιμοποιήθηκε;"
+
+#: webform_participants.module:166
+msgid "Submission ID"
+msgstr "Κωδικός υποβολής φόρμας"
+
+#: webform_participants.module:168
+msgid "yes"
+msgstr "ναί"
+
+#: webform_participants.module:168
+msgid "no"
+msgstr "όχι"
+
+#: webform_participants.module:173;340
+msgid "No codes present, yet. Click on \"Generate\" above to create codes."
+msgstr "Δεν υπάρχουν κωδικοί. Πατηστε το κουμπί -Δημιουργία Ατομικών Κωδικών- για να δημιουργήσετε κωδικούς."
+
+#: webform_participants.module:186
+msgid "Generate new codes for %node_title"
+msgstr "Δημιουργήστε νέους ατομικούς κωδικούς για την φόρμα: %node_title"
+
+#: webform_participants.module:186
+msgid "To generate codes please enter the required number of codes and hit the button."
+msgstr "Για να δημιουργήστε ατομικούς κωδικούς εισάγετε τον επιθυμητό αριθμό και πατήστε το κουμπί;"
+
+#: webform_participants.module:194
+msgid "# of codes to generate"
+msgstr "Αριθμός# κωδικών που θέλουμε να δημιουργηθούν (δεν χρησιμοποιείται εαν εισάγετε μαιλ παρακάτω)"
+
+#: webform_participants.module:204
+msgid "paste email of the participants here (1 mail in each line)"
+msgstr "Αντιγράψτε εδώ τα μαιλ των αποδεκτών (1 μαιλ σε κάθε γραμμή)"
+
+#: webform_participants.module:210
+msgid "Options"
+msgstr "Επιλογές"
+
+#: webform_participants.module:216
+msgid "type of tokens"
+msgstr "Είδος κωδικών (participant code)"
+
+#: webform_participants.module:218
+msgid "pasted_email_list"
+msgstr "Λίστα από μαιλ ή ονόματα (ένας κωδικός ανα σειρά)"
+
+#: webform_participants.module:218
+msgid "md5 hash (32 characters)"
+msgstr "md5 hash (32 χαρακτήρες ανά κωδικό)"
+
+#: webform_participants.module:218
+msgid "custom"
+msgstr ""
+
+#: webform_participants.module:222
+msgid "length of tokens (number of characters)"
+msgstr "μήκος του ατομικού κωδικού (αριθμός χαρακτήρων)"
+
+#: webform_participants.module:231
+msgid "characters to be used for tokens"
+msgstr "ποιοί χαρακτήρες επιτρέπονται για την δημιουργία του ατομικού κωδικού"
+
+#: webform_participants.module:236
+msgid "lower case letters (a-z)"
+msgstr ""
+
+#: webform_participants.module:237
+msgid "upper case letters (A-Z)"
+msgstr ""
+
+#: webform_participants.module:238
+msgid "digits (0-9)"
+msgstr "Αριθμοί (0-9)"
+
+#: webform_participants.module:239
+msgid "punctuation (.,:;-_!?)"
+msgstr "σημεία στίξης (.,:;-_!?)"
+
+#: webform_participants.module:240
+msgid "special characters (#+*=$%&|)"
+msgstr "ειδικοί χαρακτήρες (#+*=$%&|)"
+
+#: webform_participants.module:247
+msgid "Generate"
+msgstr "Δημιουργία ατομικών κωδικών"
+
+#: webform_participants.module:268
+msgid  "Αποστολή email για την φόρμα με τίτλο <br> %node_title"
+msgstr "Αποστολή email για την φόρμα με τίτλο <br> %node_title"
+
+#: webform_participants.module:268
+msgid  "To send mail to all the users that have NOT used the participant invitation code hit the button."
+msgstr "Για να αποστείλετε εμαιλ σε όλους τους χρήστες που ΔΕΝ έχουν χρησιμοποιήσει τον κωδικό τους πατήστε το κουμπί."
+
+#: webform_participants.module:277
+msgid "Send reminder mail "
+msgstr "Αποστολή υπενθύμισης με mail "
+
+#: webform_participants.module:312
+msgid "Καλημέρα. "
+msgstr "Καλημέρα. "
+
+#: webform_participants.module:314
+msgid " για να συνδεθείτε με την φόρμα χρειάζεστε τον κωδικό <b> "
+msgstr " για να συνδεθείτε με την φόρμα χρειάζεστε τον κωδικό <b> "
+
+#: webform_participants.module:315
+msgid  "  ή να χρησιμοποιήσετε αυτόν τον σύνδεσμο : <a href=\""
+msgstr "  ή να χρησιμοποιήσετε αυτόν τον σύνδεσμο : <a href=\""
+
+#: webform_participants.module:317
+msgid  "\" >ΑΤΟΜΙΚΟΣ ΣΥΝΔΕΣΜΟΣ ΕΡΩΤΗΜΑΤΟΛΟΓΙΟΥ</a>"
+msgstr "\" >ΑΤΟΜΙΚΟΣ ΣΥΝΔΕΣΜΟΣ ΕΡΩΤΗΜΑΤΟΛΟΓΙΟΥ</a>"
+
+#: webform_participants.module:320
+msgid  "Ερωτηματολόγιο :"
+msgstr "Ερωτηματολόγιο :"
+
+#: webform_participants.module:334
+msgid  "WebformParticipants Στάλθηκέ μαιλ στο : "
+msgstr "WebformParticipants Στάλθηκέ μαιλ στο : "
+
+#: webform_participants.module:334
+msgid  " Με θέμα: "
+msgstr " Με θέμα: "
+
+#: webform_participants.module:352;361
+msgid "Enter an integer only."
+msgstr ""
+
+#: webform_participants.module:355
+msgid "Enter a number greater than zero."
+msgstr ""
+
+#: webform_participants.module:364
+msgid "The length must be between 5 and 64."
+msgstr ""
+
+#: webform_participants.module:370
+msgid "Choose at least one character subset."
+msgstr ""
+
+#: webform_participants.module:484
+msgid "Due to unique constraint, only @ccount codes have been generated."
+msgstr "Λόγω κάποιου θέματος, μόνο @ccount ατομικοί κωδικοί έχουν δημιουργηθεί."
+
+#: webform_participants.module:487
+msgid "A single code has been generated."
+msgstr "Δημιουργήθηκε ένας ατομικός κωδικός."
+
+#: webform_participants.module:490
+msgid "A total of @ccount codes has been generated."
+msgstr "Δημιουργήθηκαν σηνολικά @ccount ατομικο κωδικοί."
+
+#: webform_participants.module:521
+msgid "This code is not valid."
+msgstr "Ο κωδικός αυτός δεν είναι έγκυρος"
+
+#: webform_participants.module:610
+msgid "webform_participants : access webform participants menu"
+msgstr ""
+
+#: webform_participants.module:16
+msgid "Participants Settings"
+msgstr "Participants ρυθμίσεις"
+
+#: webform_participants.module:27
+msgid "Participants Codes"
+msgstr "Participants Κωδικοί"
+
+#: webform_participants.module:37
+msgid "Participants Reminder Mail"
+msgstr "Participants Ειδοποιήσεις"
+
+#: webform_participants.info:0
+msgid "Webform Participants"
+msgstr ""
+
+#: webform_participants.info:0
+msgid "Provides random strings that can be used as codes for accessing a specific webform and sends them to participant mails.(based on webform invitation 7.x-2.4+1-dev)"
+msgstr "Παρέχει κωδικούς για μια συγκεκριμένη φόρμα και τους αποστέλει με μαιλ στα άτομα που θα επιλέξουμε (αποδέκτες)."
+
+#: webform_participants.info:0
+msgid "Webform"
+msgstr ""
+

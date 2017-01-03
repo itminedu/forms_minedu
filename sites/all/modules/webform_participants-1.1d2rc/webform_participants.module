@@ -1,7 +1,9 @@
 <?php
 /*
-* version 1.1b-beta  -20161208 - Reminder mail is associated with ViewOwnResults menu link
+* version 1.1d-beta  -20161212 - fixed email
 * Changes :
+*  1.1c-beta  -20161209 - fixed some paths
+*  1.1b-beta  -20161208 - Reminder mail is associated with ViewOwnResults menu link
 * -20161208 1.1a- Reminder mail is associated with ViewOwnResults menu link
 * -20161204b 1.0- implementing permissions , translate
 * -20161204a - implementing permissions
@@ -276,7 +278,7 @@ function webform_participants_mail_reminder_form($form, &$form_state, $node) {
 
   $form['submit'] = array(
     '#type' => 'submit',
-    '#value' => t('Αποστολή reminder mail '),
+    '#value' => t('Send reminder mail '),
   );
 
   $form['codes'] = array(
@@ -293,7 +295,7 @@ function webform_participants_mail_reminder_form($form, &$form_state, $node) {
 //++++++++++++++added 160928++++++reminder mail+++
 
 function webform_participants_mail_reminder_form_submit($form, &$form_state) {
-//  simple_mail_send("pliroforikos1@minedu.cu.cc", "pliroforikos@minedu.cu.cc","ΘEMA webform_participants_mail_reminder_submit","ΣΩΜΑ");  //Debug  
+//  simple_mail_send("plirof@minedu", "plirof@minedu.cu.cc","ΘEMA webform_participants_mail_reminder_submit","ΣΩΜΑ");  //Debug  
 
 // /*
   global $base_url;
@@ -320,11 +322,8 @@ function webform_participants_mail_reminder_form_submit($form, &$form_state) {
           ;
         //ToDo: Ίσως πιο κατατοπιστικό θέμα
         $subject=   t('Ερωτηματολόγιο :').$node->title;
-        //$to='"'. addslashes(mime_header_encode('Test mail drupal 160930c ΔΟΚΙΜΗ')) .'" <'.$code->mail.'>';//debug
         $to=$code->mail;
-        //$to="pliroforikos@minedu.cu.cc"; //debug bypass
-        $from= 'pliroforikos@minedu.cu.cc'; //toDo: Add dynamic drupal admin name
-        //drupal_mail_send($message); //original drupal mail process - replaced by simple_mail_send
+        $from= variable_get('site_mail', ''); //get global site name
         // simple_mail_send($from, $to, $subject, $body); //syntax
         if(strlen($code->used)==0 || is_null($code->used))  {
           //toDo: change to simple_mail_queue()  instead of simple_mail_send() -done
@@ -332,6 +331,7 @@ function webform_participants_mail_reminder_form_submit($form, &$form_state) {
           $tmp_to_email = filter_var($to, FILTER_SANITIZE_EMAIL);
           // Validate e-mail and send it
           if (!filter_var($tmp_to_email, FILTER_VALIDATE_EMAIL) === false) {
+            //simple_mail_send($from, $tmp_to_email, $subject, $body); //must only to users that have NOT used invite_code
             simple_mail_queue($from, $tmp_to_email, $subject, $body); //must only to users that have NOT used invite_code
             drupal_set_message(t("WebformParticipants Στάλθηκέ μαιλ στο : ").$to.t(" Με θέμα: ").$subject); //DEBUG display toDO: add exception handler
           } // end if (!filter_var
@@ -340,10 +340,10 @@ function webform_participants_mail_reminder_form_submit($form, &$form_state) {
   }
   else {
   drupal_set_message('<p><em>'.t('No codes present, yet. Click on "Generate" above to create codes.').'</em></p>'); //toDO: better error display
-    //$out .= '<p><em>'.t('No codes present, yet. Click on "Generate" above to create codes.').'</em></p>';
+   
   } // end if (count($codes) > 0)
 
-  drupal_goto('node/' . $nid . '/webform/participants-reminder');
+  drupal_goto('node/' . $nid . '/Participants/participants-reminder');
 }
 
 //----------added 160928-------reminder mail submit
@@ -459,7 +459,6 @@ function webform_participants_generate_form_submit($form, &$form_state) {
       // Code generation
       $code = md5(microtime(1) * rand());
       //preg_match_all($pattern, $string, $matches[0][$i-1]);
-      //$matches[0][$i]=$string; // HARD CODED added by J DEBUG
       !!filter_var($matches[0][$i-1], FILTER_VALIDATE_EMAIL);
       try {
         // Insert code to DB
@@ -491,7 +490,7 @@ function webform_participants_generate_form_submit($form, &$form_state) {
   elseif ($codes_count >= 2) {
     drupal_set_message(t('A total of @ccount codes has been generated.', array('@ccount' => $codes_count)),'status');
   }
-  drupal_goto('node/' . $nid . '/webform/participants-codes');
+  drupal_goto('node/' . $nid . '/Participants/participants-codes');
 }
 
 function webform_participants_form_alter(&$form, &$form_state, $form_id) {

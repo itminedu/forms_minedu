@@ -1,0 +1,12 @@
+name = Webform authcode
+description = "Add an authorization code to access a webform + bug fix: 161227 authcode was automatically activated in each save"
+core = 7.x
+package = Webform
+dependencies[] = webform
+
+; Information added by drupal.org packaging script on 2013-10-26
+version = "7.x-1.1+0-dev-jonmod01"
+core = "7.x"
+project = "webform_authcode"
+datestamp = "1382755529"
+
