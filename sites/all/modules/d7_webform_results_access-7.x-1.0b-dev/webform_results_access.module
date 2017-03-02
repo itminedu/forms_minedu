@@ -1,0 +1,58 @@
+<?
+// FROM: http://tylerfrankenstein.com/code/drupal-webform-submission-results-user-access-control
+
+/**
+ * Implementation of hook_webform_results_access().
+ */
+function webform_results_access_webform_results_access($node, $account = NULL) {
+  return webform_results_access_webform_access($node, $account);
+}
+
+/**
+ * Implementation of hook_webform_submission_access().
+ */
+function webform_results_access_webform_submission_access($node, $submission, $op = 'view', $account = NULL) {
+  return webform_results_access_webform_access($node, $account);
+}
+
+/**
+ * Returns true if account is a value in the webform results user
+ * reference field on the webform content type.
+ *
+ * @param object $node
+ *   The webform node.
+ * @param object $account
+ *   The user account, optional. Defaults to current user.
+ *
+ * @return bool
+ *   Returns true if user is listed, false otherwise.
+ */
+function webform_results_access_webform_access ($node, $account = NULL) {
+  global $user;
+  $account = isset($account) ? $account : $user;
+  $access = false;
+  if (isset($node->field_webform_results_access)) {
+    // This webform has user(s) specified for submission results access control.
+    if (user_access("administer nodes") || user_access("edit any webform content")) {
+      $access = true;
+    }
+    else {
+      // For each user specified, make sure the current user is one of them,
+      // otherwise don't show the results.
+     if (isset($node->field_webform_results_access['und'])){
+      foreach ($node->field_webform_results_access['und'] as $i => $ref) {
+	// User Reference
+        if (isset($ref['uid']) && (($ref['uid'] == $account->uid))) {
+          $access = true;
+          break;
+        }
+	// Entity Reference
+        if (isset($ref['target_id']) && (($ref['target_id'] == $account->uid))) {
+          $access = true;
+          break;
+        }
+      }} //end of if (isset($node->field_webform_results_access['und']))
+    }
+  }
+  return $access;
+}

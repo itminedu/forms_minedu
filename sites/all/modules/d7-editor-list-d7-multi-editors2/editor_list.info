@@ -1,0 +1,5 @@
+name = Editor List
+description = Modified version for osminedu team. Adds an extra field "editors" in 4 content types.This solves the problem of needing extra&specific editors for some content types.Custom module illustrating a custom solution for having multiple editors on a node. Based on version = "7.x-1.1d-dev"
+core = 7.x
+version = "7.x-1.1d-dev"
+dependencies[] = entityreference

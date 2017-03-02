@@ -36,12 +36,6 @@ function cas_ldap_tokens($type, $tokens, array $data = array(), array $options =
           if (is_array($value)) {
             $value = $value[0];
           }
-          // Values that are not valid UTF-8 cannot be run through
-          // check_plain(). Convert these to a string. Normally, this would be a
-          // GUID, so format as such.
-          if ($sanitize && !drupal_validate_utf8($value)) {
-            $value = cas_ldap_guid_bin2hex($value);
-          }
           $replacements[$original] = $sanitize ? check_plain($value) : $value;
         }
         elseif ($name == '?') {
@@ -56,25 +50,4 @@ function cas_ldap_tokens($type, $tokens, array $data = array(), array $options =
   }
 
   return $replacements;
-}
-
-/**
- * Converts a binary GUID into a string representation.
- *
- * @param $guid binary
- *   The GUID.
- *
- * @return string
- *   The safe string representation of the GUID.
- */
-function cas_ldap_guid_bin2hex($guid) {
-  $guid = bin2hex($guid);
-
-  // Format $guid so it matches what other LDAP tool displays for AD GUIDs.
-  // If $guid is not the normal length for a GUID, do not format.
-  if (strlen($guid) === 32) {
-    $guid = strtoupper(substr($guid, 6, 2) . substr($guid, 4, 2) . substr($guid, 2, 2) . substr($guid, 0, 2) . '-' . substr($guid, 10, 2) . substr($guid, 8, 2) . '-' . substr($guid, 14, 2) . substr($guid, 12, 2) . '-' . substr($guid, 16, 4) . '-' . substr($guid, 20));
-  }
-
-  return $guid;
 }

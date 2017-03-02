@@ -86,22 +86,6 @@ function cas_attributes_admin_settings() {
       'Roles must be specified by name (not by numeric ID, since that is site specific).<br>'),
   );
 
-  if (module_exists('cas_ldap')) {
-    $links = array(
-      '@cas_attr' => url('admin/config/people/cas/attributes/cas'),
-      '@ldap_attr' => url('admin/config/people/cas/attributes/ldap')
-    );
-    $form['cas_attributes_roles']['cas_attributes_roles_cas_or_ldap'] = array(
-      '#type' => 'radios',
-      '#title' => t('CAS or LDAP attributes?'),
-      '#description' => t('Specify if you are matching roles based on ' .
-        '<a href="@cas_attr">CAS attributes</a> or <a href="@ldap_attr">LDAP attributes</a>. ' .
-        'Both cannot be supported at once due to namespace collisions with the attribute names.', $links),
-      '#options' => array('cas' => t('CAS'), 'ldap' => t('LDAP')),
-      '#default_value' => variable_get('cas_attributes_roles_cas_or_ldap', 'cas'),
-    );
-  }
-
   $roles = user_roles(TRUE);
   unset($roles[DRUPAL_AUTHENTICATED_RID]);
   asort($roles);
@@ -151,28 +135,13 @@ function cas_attributes_list() {
 
   foreach ($attributes as $attribute => $value) {
     if (is_array($value)) {
-      $html = "";
-      foreach ($value as $k => $v) {
-        //drupal_set_message("cas_attrib_admin : ".$v);   //debug JON 161104  //all results are here
-        $html .= check_plain($v) . '<br />';
-      }
-      //drupal_set_message("cas_attrib_admin html : ".$html);   //debug JON 161104  //all results are here
-      $rows[] = array(
-        t('[cas:attribute:@attribute]',
-          array('@attribute' => drupal_strtolower($attribute))),
-        $html
-      );
-
-    } else {
-      $rows[] = array(
-        t('[cas:attribute:@attribute]',
-          array('@attribute' => drupal_strtolower($attribute))),
-        check_plain($value),
-      );
-
+      $value = $value[0];
     }
+    $rows[] = array(
+      t('[cas:attribute:@attribute]', array('@attribute' => drupal_strtolower($attribute))),
+      check_plain($value),
+    );
   }
-//drupal_set_message("cas_attrib_admin print_r rows1 : ".'<pre>'. print_r($rows, true) .'</pre>');   //debug JON 161104  //all results are here
 
   if (empty($rows)) {
     $rows[] = array(

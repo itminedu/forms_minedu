@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<!--[if IE 8]><html class="sp??  no-js lt-ie9" lang="en" ><![endif]-->
+<!--[if gt IE 8]><!--><html class="sp??  no-js" lang="en" ><!--<![endif]-->
+  <head>
+    <link href="//dab1nmslvvntp.cloudfront.net" ref="dns-prefetch">
+    <link href="//d2sis3lil8ndrq.cloudfront.net" ref="dns-prefetch">
+    <link href="//sitepoint.com" ref="dns-prefetch">  </head>
+
+  <body>
+<div class="ArticleCopy language-">
+      <p>One of the things that makes Drupal great is its flexible user permission system. The out of the box permissions grid we are all familiar with covers most uses cases of controlling what users can and cannot do. It is also very easy for module developers to create new permissions and roles that restrict the logic they implement. </p>
+<p><img src="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2015/04/1428068708logo_drupal.png" alt="Drupal logo" title=""/></p>
+<p>Nevertheless, I have encountered a practical use case where the default configuration options are not enough. Namely, if you need to have multiple users with access to edit a particular node of a given type but without them necessarily having access to edit others of the same type. In other words, the next great article should be editable by Laura and Glenn but not by their colleagues. However, out of the box, users of a particular role can be masters either of their own content or of all content of a certain type. So this is not immediately possible.</p>
+<p>In this article I am going to show you my solution to this problem in the form of a simple custom module called <code>editor_list</code>.  Article nodes will have a field where you can select users and only these users (or those who have full access) will be able to edit that particular node. You can find the module already in this <a href="https://github.com/upchuk/d7-editor-list">git repository</a> and you can install it on your site for a quick start. Do keep in mind that it has a dependency on the <a href="https://www.drupal.org/project/entityreference">Entity Reference</a> module as we will see in a minute.</p>
+<p>I will keep the code comments to a minimum to save space but you can find them in the repository if you want. Basic knowledge of Drupal 7 is assumed in the remainder of this tutorial.</p>
+<h2 id="scaffolding">Scaffolding</h2>
+<p>We first need the <code>editor_list.info</code> file for our module to get us going:</p>
+<pre><code class='language-'>name = Editor List
+description = Module illustrating a custom solution for having multiple editors on a node.
+core = 7.x
+dependencies[] = entityreference</code></pre>
+<p>Next, we need our <code>editor_list.module</code> file where most of our business logic will be located. So go ahead and create it and we will populate it as we go on. </p>
+<p>Finally, though not covered here, we can have an <code>editor_list.install</code> file where we can implement <code>hook_install()</code> and <code>hook_update</code> hooks to create fields and/or deploy configuration. In the repository, you’ll find that I provided an install hook that already creates an entity reference field called <code>field_editors</code> and attaches it to the Article content type. If you are following along but not using the code in the repository, you should go ahead and create the field manually through the UI. It’s a simple field that references User entities and allows for unlimited selections. Nothing major. </p>
+<h2 id="node-access">Node access</h2>
+<p>Going back to our <code>.module</code> file, it’s time to implement our access logic. First though, to make things as flexible and reusable as possible, let’s have a simple function that returns an array of node types to which we apply our access logic:</p>
+<pre><code class='language-php'>function editor_list_node_types() {
+  return array('article');
+}</code></pre>
+<p>Since we are only targeting articles, this will suffice. But we will use this function in multiple places so in case we need to target other types as well, we just have to update this array.</p>
+<p>Next, let’s write another helpful function that returns all the user IDs set in the editors field of a given node. We will also use this in multiple places:</p>
+<pre><code class='language-php'>function editor_list_uids_from_list($node) {
+  $users = field_get_items('node', $node, 'field_editors');
+
+  $allowed_uids = array();
+  if ($users) {
+    $allowed_uids = array_map(function($user) {
+      return $user['target_id'];
+    }, $users);
+  }
+
+  return $allowed_uids;
+}</code></pre>
+<p>I believe the function is quite self explanatory so I won’t go into details here. Instead, we can turn to our <code>hook_node_access()</code> implementation that gets called by Drupal whenever a user tries to do <em>something</em> with a node (view, edit or delete):</p>
+<pre><code class='language-php'>/**
+ * Implements hook_node_access().
+ */
+function editor_list_node_access($node, $op, $account) {
+  $node_types = editor_list_node_types();
+
+  if ( ! is_object($node) || ! in_array($node-&gt;type, $node_types) || $op !== 'update') {
+    return NODE_ACCESS_IGNORE;
+  }
+
+  $allowed_uids = editor_list_uids_from_list($node);
+
+  if (empty($allowed_uids)) {
+    return NODE_ACCESS_IGNORE;
+  }
+
+  if (in_array($account-&gt;uid, $allowed_uids)) {
+    return NODE_ACCESS_ALLOW;
+  }
+}</code></pre>
+<p>So what’s happening here?</p>
+<p>First, we use our previously declared helper function to get the list of node types we want to target, and we basically ignore the situation and return if the node type of the currently accessed node is not within our list or if the operation the user is attempting is not of the type “update”. Then we use our other helper function to check if there are any users in the editor list for this node and again ignore the situation if there aren’t. However, if there are, and our accessing user is among them, we return the <code>NODE_ACCESS_ALLOW</code> constant which basically gives the user access to perform the attempted operation. And that’s it.</p>
+<p>You can <a href="https://api.drupal.org/api/drupal/modules%21node%21node.api.php/function/hook_node_access/7">check out the documentation</a> for more information about how this hook works. </p>
+<p>Let’s say you have admin users who can create and edit any type of content and regular authenticated users who cannot edit articles (apart from maybe the ones they created themselves). Adding one of these latter users to a node’s editor list would give them access to that particular node. And another great thing is that since this is all nicely integrated, contextual filters and tabs also take these dynamic permissions into account. </p>
+<h2 id="field-access">Field access</h2>
+<p>We now have a working module that does what I initially set out for it to do. But let’s say that your admin users are the only ones responsible for adding users to the editor lists. In other words, you are afraid that if your editors can edit their nodes and remove themselves from the list, they’ll get locked out of the node they are supposed to work on. </p>
+<p>To account for this situation, we need to implement a field access check and remove the possibility that editors tamper with that field. Implementing <a href="https://api.drupal.org/api/drupal/modules%21field%21field.api.php/function/hook_field_access/7">hook_field_access</a> should do the trick nicely. And if you are wondering, this hook is similar to <code>hook_node_access()</code> but is responsible for individual fields rather than the entire node (+ a couple of other small differences). </p>
+<pre><code class='language-php'>/**
+ * Implements hook_field_access().
+ */
+function editor_list_field_access($op, $field, $entity_type, $entity, $account) {
+  $node_types = editor_list_node_types();
+  if ($entity_type === 'node' &amp;&amp; is_object($entity) &amp;&amp; in_array($entity-&gt;type, $node_types)) {
+    return editor_list_control_field_access($op, $field, $entity_type, $entity, $account);
+  }
+}</code></pre>
+<p>And here we have it. There are a few more parameters because this hook gets called for all entities, not just nodes. But again, we check if the currently accessed node is one of those we defined earlier (and that the entity is in fact a node) and this time delegate to another function to keep things tidier:</p>
+<pre><code class='language-php'>function editor_list_control_field_access($op, $field, $entity_type, $entity, $account) {
+  if ($op !== 'edit') {
+    return;
+  }
+
+  $uids = editor_list_uids_from_list($entity);
+  if (!in_array($account-&gt;uid, $uids)) {
+    return;
+  }
+
+  $deny = array('field_editors');
+  if (in_array($field['field_name'], $deny)) {
+    return false;
+  }
+}}</code></pre>
+<p>Since we only care if the user is trying to <em>update</em> a particular field, we return nothing if this is not the case. Keep in mind that the op string here is <code>edit</code> and not <code>update</code> as it was in the other hook. This is just one of those Drupal quirks of inconsistency we all came to <em>love</em> so much. And like before, we ignore the situation if the current user is not part of the editor list. </p>
+<p>Then, we define an array of field names we want to deny access to (in our case only one but we can add to it depending on the use case). Finally, we return false if the currently accessed field is part of our <code>$deny</code> array. Yet another difference here in that we have to return a boolean instead of a constant like we did before. </p>
+<p>Now the editors in the list of a given node cannot remove themselves or add anybody else to the list. But then again, in some cases you may want this functionality and in others not. It’s up to you. </p>
+<h2 id="tidying-up">Tidying up</h2>
+<p>The last thing I am going to show you here relates to organization and maybe a bit of user experience. With our current implementation, the editor list field on the Article nodes is present <em>somewhere</em> on the form (wherever you dragged-and-dropped it when editing the field settings). However, wouldn’t it be nice if it were automatically part of the <code>Authoring information</code> group at the bottom of the page? Something like this:</p>
+<p><img src="https://dab1nmslvvntp.cloudfront.net/wp-content/uploads/2015/05/1431595569Screen-Shot-2015-05-14-at-11.24.43.png" alt="Drupal 7 multiple editors per node" title=""/></p>
+<p>I think so. Let’s see how we can do that. </p>
+<p>First, we need to implement <code>hook_form_alter</code> or one of its variations. I prefer the most targeted one to avoid unnecessary calls to it and a bunch of conditional checks:</p>
+<pre><code class='language-php'>/**
+ * Implements hook_form_BASE_FORM_ID_alter().
+ */
+function editor_list_form_article_node_form_alter(&amp;$form, &amp;$form_state, $form_id) {
+  $form['#after_build'][] = 'editor_list_node_form_after_build';
+}</code></pre>
+<p>We went with the <code>BASE_FORM_ID</code> of the article nodes here so if we extend our application to other types we would do the same for those as well. Inside, we just define an <code>#after_build</code> function to be triggered when the form has finished building. This is to ensure all the form alterations have been already done by contributed modules. All that is left to be done is to write the function responsible for making changes to the form:</p>
+<pre><code class='language-php'>function editor_list_node_form_after_build($form, &amp;$form_state) {
+  $field = field_info_field('field_editors');
+  if ( ! field_access('edit', $field, 'node', $form['#entity'])) {
+    return $form;
+  }
+
+  if ($form['author']['#access'] === 0) {
+    return $form;
+  }
+
+  $field_editors = $form['field_editors'];
+  $field_editors['#weight'] = 0;
+  $form['author']['additional_authors'] = $field_editors;
+  $form['field_editors'] = array();
+
+  return $form;
+}</code></pre>
+<p>This looks complicated but it really isn’t. We begin by loading the field definition of our editor list field. This is so that we can run the <code>field_access</code> check on it and just return the form array unchanged if the current user doesn’t have access to the field. Next, we do the same if the current user does not have access to the <code>author</code> group on the form (this is the <code>Authoring information</code> group we want to place the field into). And lastly, we make a copy of the field definition, change its weight and place it into the group, followed by unsetting the original definition to avoid having duplicates. </p>
+<p>And that is pretty much it. Now the editors list field should be tucked in with the rest of the information related to authorship.</p>
+<h2 id="conclusion">Conclusion</h2>
+<p>In this article, we created a solution to a content editing problem that Drupal 7 could not fix out of the box. However, it did provide us with the development tools necessary to make this an easy task inside of a custom module. </p>
+<p>We now have an editor list field on the article node form by which we can specify exactly which users have access to that particular node. Though do keep in mind that in order for this to be of any use, the users you add to these lists must not have a role that allows them to edit all article nodes. Otherwise you won’t see much of a difference.</p>
+
+
+  
+  </body>
+</html>
+
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using memcached
+Object Caching 1273/1390 objects using memcached
+Content Delivery Network via Amazon Web Services: CloudFront: dab1nmslvvntp.cloudfront.net
+
+ Served from: www.sitepoint.com @ 2017-01-13 13:04:12 by W3 Total Cache -->

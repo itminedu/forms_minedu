@@ -1,0 +1,1360 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN" "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html class="js" xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" version="XHTML+RDFa 1.0" dir="ltr" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:dc="http://purl.org/dc/terms/" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:og="http://ogp.me/ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#" xmlns:sioc="http://rdfs.org/sioc/ns#" xmlns:sioct="http://rdfs.org/sioc/types#" xmlns:skos="http://www.w3.org/2004/02/skos/core#" xmlns:xsd="http://www.w3.org/2001/XMLSchema#"><head profile="http://www.w3.org/1999/xhtml/vocab">
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="shortcut icon" href="http://tylerfrankenstein.com/sites/default/files/frankenDrupal-128.png" type="image/png">
+<meta name="HandheldFriendly" content="true">
+<link rel="shortlink" href="http://tylerfrankenstein.com/node/81">
+<meta name="Generator" content="Drupal 7 (http://drupal.org)">
+<link rel="canonical" href="http://tylerfrankenstein.com/code/drupal-webform-submission-results-user-access-control">
+<meta name="MobileOptimized" content="width">
+  <title>Drupal Webform Submission Results User Access Control | Tyler Frankenstein</title>
+  <link type="text/css" rel="stylesheet" href="Drupal%20Webform%20Submission%20Results%20User%20Access%20Control%20%7C%20Tyler%20Frankenstein_files/css_xE-rWrJf-fncB6ztZfd2huxqgxu4WO-qwma6Xer30m4.css" media="all">
+<link type="text/css" rel="stylesheet" href="Drupal%20Webform%20Submission%20Results%20User%20Access%20Control%20%7C%20Tyler%20Frankenstein_files/css_CQnCWdeeqOhz_e5El3HFzXPqLJ0gPA5KB1q1H1EDuog.css" media="all">
+<link type="text/css" rel="stylesheet" href="Drupal%20Webform%20Submission%20Results%20User%20Access%20Control%20%7C%20Tyler%20Frankenstein_files/css_9_hop1nLv6-aAFFzgviO_eWM2e3hJ48qf_RWgkDbn2Y.css" media="all">
+<link type="text/css" rel="stylesheet" href="Drupal%20Webform%20Submission%20Results%20User%20Access%20Control%20%7C%20Tyler%20Frankenstein_files/css_JCVQPyVVfxyW70doZzxiPfMZxRTnAY9NMhJ7Srg0BR8.css" media="all">
+<link type="text/css" rel="stylesheet" href="Drupal%20Webform%20Submission%20Results%20User%20Access%20Control%20%7C%20Tyler%20Frankenstein_files/css_wswbyf33d2cVBbSF3Wfrrt2-oIdn7Lt2a4R4uDw2I1U.css" media="all">
+  <script src="Drupal%20Webform%20Submission%20Results%20User%20Access%20Control%20%7C%20Tyler%20Frankenstein_files/analytics.js" async=""></script><script type="text/javascript" src="Drupal%20Webform%20Submission%20Results%20User%20Access%20Control%20%7C%20Tyler%20Frankenstein_files/js_Xjzh1hVfcgVAixhmmB6Go8TUMPOiprA-2vkC-oWXARQ.js"></script>
+<script type="text/javascript" src="Drupal%20Webform%20Submission%20Results%20User%20Access%20Control%20%7C%20Tyler%20Frankenstein_files/js_wQeOE3mtEBBbSTNNSVtVqdbdqV4m3v1qHK0uzyp31eI.js"></script>
+<script type="text/javascript" src="Drupal%20Webform%20Submission%20Results%20User%20Access%20Control%20%7C%20Tyler%20Frankenstein_files/js_COMsmDyrY9mzVU28X2uGvF4Ba3vd5eTo5xEO7dvCUZM.js"></script>
+<script type="text/javascript" src="Drupal%20Webform%20Submission%20Results%20User%20Access%20Control%20%7C%20Tyler%20Frankenstein_files/js_oq92h_Ctj7BGHNdjCEwqZc8AAZAdHNPlsZElOMNW2gU.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery(document).ready(function($) { 
+	
+	$("#navigation .content > ul").mobileMenu({
+		prependTo: "#navigation",
+		combine: false,
+        switchWidth: 760,
+        topOptionText: Drupal.settings.skeletontheme['topoptiontext']
+	});
+	
+	});
+//--><!]]>
+</script>
+<script type="text/javascript" src="Drupal%20Webform%20Submission%20Results%20User%20Access%20Control%20%7C%20Tyler%20Frankenstein_files/js_gPqjYq7fqdMzw8-29XWQIVoDSWTmZCGy9OqaHppNxuQ.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+(function(i,s,o,g,r,a,m){i["GoogleAnalyticsObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,"script","//www.google-analytics.com/analytics.js","ga");ga("create", "UA-2162208-19", {"cookieDomain":"auto"});ga("send", "pageview");
+//--><!]]>
+</script>
+<script type="text/javascript" src="Drupal%20Webform%20Submission%20Results%20User%20Access%20Control%20%7C%20Tyler%20Frankenstein_files/js_cosiRA2I8gGvG6xutIHbSRPPvI94B6VSXlROB3gO-B0.js"></script>
+<script type="text/javascript" src="Drupal%20Webform%20Submission%20Results%20User%20Access%20Control%20%7C%20Tyler%20Frankenstein_files/ckeditor.js"></script>
+<script type="text/javascript" src="Drupal%20Webform%20Submission%20Results%20User%20Access%20Control%20%7C%20Tyler%20Frankenstein_files/js_KyOK5-WDdBfEV5ZlufHKYGAjeWFj0jC9yYMiWd-9sWY.js"></script>
+<script type="text/javascript">
+<!--//--><![CDATA[//><!--
+jQuery.extend(Drupal.settings, {"basePath":"\/","pathPrefix":"","skeletontheme":{"topoptiontext":"Select a page"},"ajaxPageState":{"theme":"skeletontheme","theme_token":"XN3wUHOSZ_xtQsP7OtqwtgHP5wgXVQIlwBc1Seq6YW4","js":{"sites\/all\/modules\/wysiwyg\/wysiwyg.js":1,"misc\/jquery.js":1,"misc\/jquery.once.js":1,"misc\/drupal.js":1,"misc\/ui\/jquery.ui.core.min.js":1,"misc\/ui\/jquery.ui.widget.min.js":1,"sites\/all\/modules\/media\/js\/media.core.js":1,"sites\/all\/modules\/wysiwyg\/wysiwyg.init.js":1,"sites\/all\/modules\/media\/js\/util\/json2.js":1,"sites\/all\/modules\/media\/js\/util\/ba-debug.min.js":1,"misc\/ui\/jquery.ui.mouse.min.js":1,"misc\/ui\/jquery.ui.resizable.min.js":1,"misc\/ui\/jquery.ui.draggable.min.js":1,"misc\/ui\/jquery.ui.button.min.js":1,"misc\/ui\/jquery.ui.position.min.js":1,"misc\/ui\/jquery.ui.dialog.min.js":1,"sites\/all\/modules\/views\/js\/jquery.ui.dialog.patch.js":1,"misc\/jquery.cookie.js":1,"misc\/form.js":1,"sites\/all\/modules\/comment_notify\/comment_notify.js":1,"sites\/all\/themes\/skeletontheme\/js\/jquery.mobilemenu.js":1,"0":1,"sites\/all\/modules\/google_analytics\/googleanalytics.js":1,"1":1,"public:\/\/js\/wysiwyg\/wysiwyg_ckeditor_uWMoMQ7qlhtyf-cFJlMTazsAxhCeS88weKBiAtXujAQ.js":1,"sites\/all\/libraries\/ckeditor\/ckeditor.js":1,"sites\/all\/modules\/wysiwyg\/editors\/js\/ckeditor-3.0.js":1,"sites\/all\/modules\/wysiwyg\/editors\/js\/none.js":1,"sites\/all\/modules\/media\/js\/media.popups.js":1,"misc\/textarea.js":1,"modules\/filter\/filter.js":1,"sites\/all\/modules\/mollom\/mollom.js":1},"css":{"modules\/system\/system.base.css":1,"modules\/system\/system.menus.css":1,"modules\/system\/system.messages.css":1,"modules\/system\/system.theme.css":1,"sites\/all\/modules\/media\/css\/media.css":1,"misc\/ui\/jquery.ui.core.css":1,"misc\/ui\/jquery.ui.theme.css":1,"misc\/ui\/jquery.ui.resizable.css":1,"misc\/ui\/jquery.ui.button.css":1,"misc\/ui\/jquery.ui.dialog.css":1,"sites\/all\/modules\/comment_notify\/comment_notify.css":1,"modules\/aggregator\/aggregator.css":1,"modules\/book\/book.css":1,"modules\/comment\/comment.css":1,"sites\/all\/modules\/date\/date_api\/date.css":1,"modules\/field\/theme\/field.css":1,"sites\/all\/modules\/custom\/frank\/frank.css":1,"sites\/all\/modules\/mollom\/mollom.css":1,"modules\/node\/node.css":1,"modules\/search\/search.css":1,"modules\/user\/user.css":1,"sites\/all\/modules\/views\/css\/views.css":1,"sites\/all\/modules\/ctools\/css\/ctools.css":1,"sites\/all\/modules\/panels\/css\/panels.css":1,"modules\/filter\/filter.css":1,"sites\/default\/files\/honeypot\/honeypot.css":1,"sites\/all\/themes\/skeletontheme\/css\/skeleton.css":1,"sites\/all\/themes\/skeletontheme\/css\/style.css":1,"sites\/all\/themes\/skeletontheme\/css\/buttons.css":1,"sites\/all\/themes\/skeletontheme\/css\/layout.css":1,"sites\/all\/themes\/skeletontheme\/color\/colors.css":1}},"googleanalytics":{"trackOutbound":1,"trackMailto":1,"trackDownload":1,"trackDownloadExtensions":"7z|aac|arc|arj|asf|asx|avi|bin|csv|doc(x|m)?|dot(x|m)?|exe|flv|gif|gz|gzip|hqx|jar|jpe?g|js|mp(2|3|4|e?g)|mov(ie)?|msi|msp|pdf|phps|png|ppt(x|m)?|pot(x|m)?|pps(x|m)?|ppam|sld(x|m)?|thmx|qtm?|ra(m|r)?|sea|sit|tar|tgz|torrent|txt|wav|wma|wmv|wpd|xls(x|m|b)?|xlt(x|m)|xlam|xml|z|zip"},"urlIsAjaxTrusted":{"\/code\/drupal-webform-submission-results-user-access-control":true,"\/comment\/reply\/81":true,"\/code\/drupal-webform-submission-results-user-access-control?destination=node\/81":true},"tagmap":[],"wysiwyg":{"configs":{"ckeditor":{"formatvisitor_filtered_html":{"baseHref":"http:\/\/tylerfrankenstein.com\/","width":"auto","resize_minWidth":450,"theme":"default","skin":"kama","entities_latin":false,"entities_greek":false,"format_tags":"p;address;pre;h2;h3;h4;h5;h6;div","allowedContent":true,"forcePasteAsPlainText":0,"language":"en","simple_source_formatting":0,"toolbarLocation":"top","resize_enabled":true,"toolbar":[["Bold","Italic","BulletedList","NumberedList","Link","Blockquote","Source","Format"]]}}},"plugins":[],"disable":"Disable rich-text","enable":"Enable rich-text","triggers":{"edit-comment-body-und-0-value":{"field":"edit-comment-body-und-0-value","resizable":1,"select":"edit-comment-body-und-0-format--2","formatvisitor_filtered_html":{"editor":"ckeditor","status":1,"toggle":1}}}},"media":{"browserUrl":"\/media\/browser?render=media-popup","styleSelectorUrl":"\/media\/-media_id-\/format-form?render=media-popup","blacklist":["src","fid","view_mode","format"]}});
+//--><!]]>
+</script>
+<link href="Drupal%20Webform%20Submission%20Results%20User%20Access%20Control%20%7C%20Tyler%20Frankenstein_files/editor.css" type="text/css" rel="stylesheet"><script src="Drupal%20Webform%20Submission%20Results%20User%20Access%20Control%20%7C%20Tyler%20Frankenstein_files/en.js" type="text/javascript"></script><script src="Drupal%20Webform%20Submission%20Results%20User%20Access%20Control%20%7C%20Tyler%20Frankenstein_files/default.js" type="text/javascript"></script></head>
+<body onpageshow='event.persisted &amp;&amp; (function(){var allInstances = CKEDITOR.instances, editor, doc;for ( var i in allInstances ){	editor = allInstances[ i ];	doc = editor.document;	if ( doc )	{		doc.$.designMode = "off";		doc.$.designMode = "on";	}}})();' class="html not-front not-logged-in no-sidebars page-node page-node- page-node-81 node-type-page">
+  <div id="skip-link">
+    <a href="#main-content" class="element-invisible element-focusable">Skip to main content</a>
+  </div>
+    <div id="wrap">
+    <div class="container">
+        
+                
+        <div class="clear"></div>
+        
+        <!-- #header -->
+                <!--<div id="header" class="five columns clearfix">-->
+        <div id="header" class="eleven columns clearfix">
+		        
+            <!--<div class="inner">-->
+            <div class="eleven columns inner">
+    
+                                  <a href="http://tylerfrankenstein.com/" title="Home" rel="home" id="logo">
+                    <img src="Drupal%20Webform%20Submission%20Results%20User%20Access%20Control%20%7C%20Tyler%20Frankenstein_files/frankenDrupal-128_0_0.png" alt="Home">
+                  </a>
+                                
+                                <div id="name-and-slogan">
+                
+                                        <div id="site-name">
+                    <a href="http://tylerfrankenstein.com/" title="Home" rel="home">Tyler Frankenstein</a>
+                    </div>
+                                        
+                                        <div id="site-slogan">
+                    Drupal Developer | Open Source Technologist | Programmer | Musician                    </div>
+                                    
+                </div>
+                            </div>
+        </div><!-- /#header -->
+        
+                <!-- #header-right -->
+        <div id="header-right" class="five columns clearfix">
+        
+        	 <div class="inner">
+			  <div class="region region-header-right">
+    <div id="block-search-form" class="block block-search">
+
+    
+  <div class="content">
+    <form action="/code/drupal-webform-submission-results-user-access-control" method="post" id="search-block-form" accept-charset="UTF-8"><div><div class="container-inline">
+      <h2 class="element-invisible">Search form</h2>
+    <div class="form-item form-type-textfield form-item-search-block-form">
+  <label class="element-invisible" for="edit-search-block-form--2">Search </label>
+ <input title="Enter the terms you wish to search for." id="edit-search-block-form--2" name="search_block_form" size="15" maxlength="128" class="form-text" type="text">
+</div>
+<div class="form-actions form-wrapper" id="edit-actions--2"><input id="edit-submit--2" name="op" value="Search" class="form-submit" type="submit"></div><input name="form_build_id" value="form-ARiH3JNeUBrbpWpOL4gTNUjrQyrALwk2Gh1HhP1Wdyg" type="hidden">
+<input name="form_id" value="search_block_form" type="hidden">
+</div>
+</div></form>  </div>
+</div>
+<div id="block-block-2" class="block block-block">
+
+    
+  <div class="content">
+     <p><a href="http://drupal.org/u/tyler.frankenstein" title="Tyler Frankenstein on Drupal.org"><img alt="Tyler Frankenstein's Drupal Association Membership" src="Drupal%20Webform%20Submission%20Results%20User%20Access%20Control%20%7C%20Tyler%20Frankenstein_files/organization-badge-64px.png" style="width: 64px; height: 64px; border-width: 0px; border-style: solid; "></a>&nbsp;<a href="https://www.github.com/signalpoint" title="Tyler Frankenstein on GitHub.com"><img alt="Tyler Frankenstein GItHub Link" class="media-image" style="width: 64px; height: 64px; " typeof="foaf:Image" src="Drupal%20Webform%20Submission%20Results%20User%20Access%20Control%20%7C%20Tyler%20Frankenstein_files/github.png" height="64" width="64"></a></p>   </div>
+</div>
+  </div>
+        	</div>
+            
+        </div><!-- /#header-right -->
+                
+        <div class="clear"></div>
+        
+        <!-- #navigation -->
+        <div id="navigation" class="sixteen columns clearfix">
+        
+            <div class="menu-header">
+                              <div class="region region-header">
+    <div id="block-system-main-menu" class="block block-system block-menu">
+
+    
+  <div class="content">
+    <ul class="menu"><li class="first leaf"><a href="http://tylerfrankenstein.com/portfolio">Portfolio</a></li>
+<li class="leaf"><a href="http://tylerfrankenstein.com/code" title="">Code</a></li>
+<li class="leaf"><a href="http://tylerfrankenstein.com/music">Music</a></li>
+<li class="leaf"><a href="http://drupalgap.org/" title="Application Development Kit for Drupal">DrupalGap</a></li>
+<li class="last leaf"><a href="http://jdrupal.easystreet3.com/" title="Application Development Tools for Drupal">jDrupal</a></li>
+</ul>  </div>
+</div>
+  </div>
+                            </div>
+            
+        </div><!-- /#navigation -->
+        
+                
+                <div id="content" class="sixteen columns clearfix">    
+                
+                    
+                            <div id="breadcrumb"><h2 class="element-invisible">You are here</h2><div class="breadcrumb"><a href="http://tylerfrankenstein.com/">Home</a><span class="sep">»</span>Drupal Webform Submission Results User Access Control</div></div>
+                        
+            <div id="main">
+            
+                                
+                                
+                                <h1 class="title" id="page-title">
+                  Drupal Webform Submission Results User Access Control                </h1>
+                                
+                                
+                                <div class="tabs">
+                                  </div>
+                                
+                                
+                                
+                  <div class="region region-content">
+    <div id="block-system-main" class="block block-system">
+
+    
+  <div class="content">
+    <div id="node-81" class="node node-page node-promoted clearfix" about="/code/drupal-webform-submission-results-user-access-control" typeof="foaf:Document">
+
+      <span property="dc:title" content="Drupal Webform Submission Results User Access Control" class="rdf-meta element-hidden"></span><span property="sioc:num_replies" content="19" datatype="xsd:integer" class="rdf-meta element-hidden"></span>
+      <div class="meta submitted">
+        <div class="user-picture">
+    <a href="http://tylerfrankenstein.com/users/tyler" title="View user profile."><img typeof="foaf:Image" src="Drupal%20Webform%20Submission%20Results%20User%20Access%20Control%20%7C%20Tyler%20Frankenstein_files/picture-1-1471125178.png" alt="tyler's picture" title="tyler's picture"></a>  </div>
+      <span property="dc:date dc:created" content="2012-02-06T14:36:29-05:00" datatype="xsd:dateTime" rel="sioc:has_creator">Submitted by <a href="http://tylerfrankenstein.com/users/tyler" title="View user profile." class="username" xml:lang="" about="/users/tyler" typeof="sioc:UserAccount" property="foaf:name" datatype="">tyler</a> on Mon, 02/06/2012 - 14:36</span>            <div><em>Updated</em>: 2014-01-10</div>
+          </div>
+  
+  <div class="content clearfix">
+    <div class="field field-name-field-page-category field-type-taxonomy-term-reference field-label-inline clearfix"><div class="field-label">Category:&nbsp;</div><div class="field-items"><div class="field-item even"><a href="http://tylerfrankenstein.com/taxonomy/term/1" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">Code</a></div></div></div><div class="field field-name-field-page-tags field-type-taxonomy-term-reference field-label-inline clearfix"><div class="field-label">Tags:&nbsp;</div><div class="field-items"><div class="field-item even"><a href="http://tylerfrankenstein.com/tags/drupal-6x" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">drupal 6.x</a></div><div class="field-item odd"><a href="http://tylerfrankenstein.com/tags/webform" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">webform</a></div><div class="field-item even"><a href="http://tylerfrankenstein.com/tags/drupal-7x" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">drupal 7.x</a></div><div class="field-item odd"><a href="http://tylerfrankenstein.com/tags/planet-drupal" typeof="skos:Concept" property="rdfs:label skos:prefLabel" datatype="">planet drupal</a></div></div></div><div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"> <p>Have
+ you ever wanted to grant access to a certain list of users so they 
+could access a Drupal Webform's submission results? The default 
+permissions that come with Webform don't provide much granularity in 
+this scenario, so a custom solution needs to be implemented.</p><p>Luckily Webform has a few hooks to make our lives easier.</p><ul><li>hook_webform_results_access</li><li>hook_webform_submission_access</li></ul><p>By
+ adding an unlimited value user reference field to the Webform content 
+type (e.g. field_webform_results_access) and implementing the two hooks 
+above, this can be accomplished. The user reference field will allow you
+ to attach users to a webform node, then if that user is listed in that 
+field on the webform node, then they can access the webform submission 
+results. We just have to write a little code to accomplish this, for 
+example:</p><p><u><strong>Draupl 6</strong></u></p>
+<pre>/**
+ * Implementation of hook_webform_results_access().
+ */
+function my_module_webform_results_access($node, $account = NULL) {
+  return my_module_webform_access($node, $account);
+}
+
+/**
+ * Implementation of hook_webform_submission_access().
+ */
+function my_module_webform_submission_access($node, $submission, $op = 'view', $account = NULL) {
+  return my_module_webform_access($node, $account);
+}
+
+/**
+ * Returns true if account is a value in the webform results user
+ * reference field on the webform content type.
+ *
+ * @param object $node
+ *   The webform node.
+ * @param object $account
+ *   The user account, optional. Defaults to current user.
+ *
+ * @return bool
+ *   Returns true if user is listed, false otherwise.
+ */
+function my_module_webform_access ($node, $account = NULL) {
+  global $user;
+  $account = isset($account) ? $account : $user;
+  $access = false;
+  if (isset($node-&gt;field_webform_results_access[0]['uid'])) { // Drupal 6
+    // This webform has user(s) specified for submission results access control.
+    if (user_access("administer nodes") || user_access("edit any webform content")) {
+      $access = true;
+    }
+    else {
+      // For each user specified, make sure the current user is one of them,
+      // otherwise don't show the results.
+      foreach ($node-&gt;field_webform_results_access as $i =&gt; $user_reference) {
+        if ($user_reference['uid'] == $account-&gt;uid) {
+          $access = true;
+          break;
+        }
+      }
+    }
+  }
+  return $access;
+}
+</pre>
+<p>That's all folks, just flush all of your caches and you should be all
+ set. Add some user's to the user reference field on your webform nodes 
+and then they'll be able to access the submission results on that 
+webform.</p><p><u><strong>Drupal 7</strong></u></p><p>There are only two lines of code that are different to make this work in Drupal 7, change this line:</p>
+<pre>if (isset($node-&gt;field_webform_results_access[0]['uid'])) {</pre>
+<p>To this:</p>
+<pre>if (isset($node-&gt;field_webform_results_access['und'][0]['uid'])) {</pre>
+<p>And this line:</p>
+<pre>foreach ($node-&gt;field_webform_results_access as $i =&gt; $user_reference) {</pre>
+<p>To this:</p>
+<pre>foreach ($node-&gt;field_webform_results_access['und'] as $i =&gt; $user_reference) {</pre>
+<p><u><strong>Older Versions of Webform</strong></u></p><p>Before 
+Webform offered the hooks mentioned above (I'm not sure when the hooks 
+were introduced, I didn't notice them until Webform 3.17), we had to 
+take a slightly different approach to accomplish the same task. We 
+needed to work with hook_menu_alter and our theme's template.php file, 
+for example this is how I accomplished the same thing in Webform 3.2:</p>
+<pre>function my_module_menu_alter ($items) {
+
+  // attach a custom access callback function to webform results and submissions
+  if (module_exists("webform")) {
+
+    // webform results menu paths
+    $result_menu_paths = array(
+      'node/%webform_menu/webform-results',
+      'node/%webform_menu/webform-results/submissions',
+      'node/%webform_menu/webform-results/analysis',
+      'node/%webform_menu/webform-results/analysis/%webform_menu_component',
+      'node/%webform_menu/webform-results/table',
+      'node/%webform_menu/webform-results/download',
+    );
+    foreach ($result_menu_paths as $result_menu_path) {
+      $items[$result_menu_path]['access callback'] = 'my_module_webform_results_access';  
+    }
+
+    // webform submission menu paths
+    $submission_menu_paths = array(
+      'node/%webform_menu/submissions',
+      'node/%webform_menu/submission/%webform_menu_submission',
+      'node/%webform_menu/submission/%webform_menu_submission/view',
+    );
+    foreach ($submission_menu_paths as $submission_menu_path) {
+      $items[$submission_menu_path]['access callback'] = 'my_module_webform_submission_access';  
+    }
+
+  }
+
+}
+
+// override of webform_results_access
+function my_module_webform_results_access ($node, $account = NULL) {
+  global $user;
+  $account = isset($account) ? $account : $user;
+
+  // this is webform's default way of dealing with access, if this doesn't pass, fall back to our custom access check
+  $webform_access = node_access('view', $node, $account) &amp;&amp; (user_access('access all webform results', $account) || (user_access('access own webform results', $account) &amp;&amp; $account-&gt;uid == $node-&gt;uid));
+
+  if ($webform_access) {
+    return true;
+  }
+  else {
+    return my_module_webform_access($node);
+  }
+}
+
+// override of webform_submission_access
+function my_module_webform_submission_access($node, $submission, $op = 'view', $account = NULL) {
+  global $user;
+  $account = isset($account) ? $account : $user;
+
+  $access_all = user_access('access all webform results', $account);
+  $access_own_submission = isset($submission) &amp;&amp; user_access('access own webform submissions', $account) &amp;&amp; (($account-&gt;uid &amp;&amp; $account-&gt;uid == $submission-&gt;uid) || isset($_SESSION['webform_submission'][$submission-&gt;sid]));
+  $access_node_submissions = user_access('access own webform results', $account) &amp;&amp; $account-&gt;uid == $node-&gt;uid;
+
+  $general_access = $access_all || $access_own_submission || $access_node_submissions || my_module_webform_access($node);
+
+  // Disable the page cache for anonymous users in this access callback,
+  // otherwise the "Access denied" page gets cached.
+  if (!$account-&gt;uid &amp;&amp; user_access('access own webform submissions', $account)) {
+    webform_disable_page_cache();
+  }
+
+  switch ($op) {
+    case 'view':
+      return $general_access;
+    case 'edit':
+      return $general_access &amp;&amp; (user_access('edit all webform submissions', $account) || (user_access('edit own webform submissions', $account) &amp;&amp; $account-&gt;uid == $submission-&gt;uid));
+    case 'delete':
+      return $general_access &amp;&amp; (user_access('delete all webform submissions', $account) || (user_access('delete own webform submissions', $account) &amp;&amp; $account-&gt;uid == $submission-&gt;uid));
+    case 'list':
+      return user_access('access all webform results', $account) || (user_access('access own webform submissions', $account) &amp;&amp; ($account-&gt;uid || isset($_SESSION['webform_submission']))) || (user_access('access own webform results', $account) &amp;&amp; $account-&gt;uid == $node-&gt;uid);
+  }
+}
+
+// webform submission results user access cck field check
+function my_module_webform_access ($node) {
+  global $user;
+  $account = isset($account) ? $account : $user;
+  $access = false;
+  if (isset($node-&gt;field_webform_results_access[0]['uid'])) { // this webform has uniqname(s) specified for access control
+    if (user_access("administer nodes") || user_access("edit any webform content")) {
+      $access = true;
+    }
+    else {
+      // for each uniqname specified, make sure the current user is one of them, otherwise don't show the results
+      foreach ($node-&gt;field_webform_results_access as $i =&gt; $user_reference) {
+        if ($user_reference['uid'] == $account-&gt;uid) {
+          $access = true;
+          break;
+        }
+      }
+    }
+  }
+  return $access;
+}</pre>
+<p>And then a few simple template.php overriddes for themeing the webform properly [ the only difference is adding a call to <strong>my_theme_webform_access($node)</strong> ]&nbsp;:</p>
+<pre>/**
+ * MY THEME OVERRIDE - Theme the header of the submissions table.
+ *
+ * This is done in it's own function so that webform can retrieve the header and
+ * use it for sorting the results.
+ */
+
+function my_theme_webform_results_submissions_header($node) {
+  global $user;
+
+  $columns = array(
+    array('data' =&gt; t('#'), 'field' =&gt; 'sid', 'sort' =&gt; 'asc'),
+    array('data' =&gt; t('Submitted'), 'field' =&gt; 'submitted'),
+  );
+  if (
+    user_access('access all webform results') ||
+    (user_access('access own webform results') &amp;&amp; $user-&gt;uid == $node-&gt;uid) ||
+    my_theme_webform_access($node)
+  ) {
+    $columns[] = array('data' =&gt; t('User'), 'field' =&gt; 'name');
+    $columns[] = array('data' =&gt; t('IP Address'), 'field' =&gt; 'remote_addr');
+  }
+  $columns[] = array('data' =&gt; t('Operations'), 'colspan' =&gt; module_exists('print') ? 5 : 3);
+
+  return $columns;
+}
+
+/**
+ * MY THEME OVERRIDE - Theme the submissions tab of the webform results page.
+ *
+ * @param $node
+ *   The node whose results are being displayed.
+ * @param $submissions
+ *   An array of all submissions for this webform.
+ * @param $total_count
+ *   The total number of submissions to this webform.
+ * @param $pager_count
+ *   The number of results to be shown per page.
+ */
+function my_theme_webform_results_submissions($node, $submissions, $total_count = 0, $pager_count = 0) {
+  global $user;
+
+  drupal_add_css(drupal_get_path('module', 'webform') . '/css/webform-admin.css', 'theme', 'all', FALSE);
+
+  // This header has to be generated separately so we can add the SQL necessary
+  // to sort the results.
+  $header = theme('webform_results_submissions_header', $node);
+  $operation_column = end($header);
+  $operation_total = $operation_column['colspan'];
+
+  $rows = array();
+  foreach ($submissions as $sid =&gt; $submission) {
+    $row = array(
+      $submission-&gt;is_draft ? t('@sid (draft)', array('@sid' =&gt; $sid)) : $sid,
+      format_date($submission-&gt;submitted, 'small'),
+    );
+    if (
+      user_access('access all webform results') ||
+      (user_access('access own webform results') &amp;&amp; $user-&gt;uid == $node-&gt;uid) ||
+      my_theme_webform_access($node)
+    ) {
+      $row[] = theme('username', $submission);
+      $row[] = $submission-&gt;remote_addr;
+    }
+    $row[] = l(t('View'), "node/$node-&gt;nid/submission/$sid");
+    $operation_count = 1;
+    if (module_exists('print_pdf') &amp;&amp; user_access('access PDF version')) {
+      $row[] = l(t('PDF'), "printpdf/$node-&gt;nid/submission/$sid", array('query' =&gt; drupal_get_destination()));
+      $operation_count++;
+    }
+    if (module_exists('print') &amp;&amp; user_access('access print')) {
+      $row[] = l(t('Print'), "print/$node-&gt;nid/submission/$sid");
+      $operation_count++;
+    }
+    if ((user_access('edit own webform submissions') &amp;&amp; $user-&gt;uid == $submission-&gt;uid) || user_access('edit all webform submissions')) {
+      $row[] = l(t('Edit'), "node/$node-&gt;nid/submission/$sid/edit", array('query' =&gt; drupal_get_destination()));
+      $operation_count++;
+    }
+    if ((user_access('delete own webform submissions') &amp;&amp; $user-&gt;uid == $submission-&gt;uid) || user_access('delete all webform submissions')) {
+      $row[] = l(t('Delete'), "node/$node-&gt;nid/submission/$sid/delete", array('query' =&gt; drupal_get_destination()));
+      $operation_count++;
+    }
+    if ($operation_count &lt; $operation_total) {
+      $row[count($row) - 1] = array('data' =&gt; $row[count($row) - 1], 'colspan' =&gt; $operation_total - $operation_count + 1);
+    }
+    $rows[] = $row;
+  }
+
+  if (count($rows) == 0) {
+    $rows[] = array(array('data' =&gt; t('There are no submissions for this form. &lt;a href="!url"&gt;View this form&lt;/a&gt;.', array('!url' =&gt; url('node/' . $node-&gt;nid))), 'colspan' =&gt; 4 + $operation_total));
+  }
+
+  $output = '';
+  $output .= theme('webform_results_per_page', $total_count, $pager_count);
+  $output .= theme('table', $header, $rows);
+  if (arg(2) == 'submissions') {
+    $output .= theme('links', array('webform' =&gt; array('title' =&gt; t('Go back to the form'), 'href' =&gt; 'node/' . $node-&gt;nid)));
+  }
+  if ($pager_count) {
+    $output .= theme('pager', NULL, $pager_count, 0);
+  }
+  return $output;
+}</pre>
+<p>As you can see, there is a lot more code involved in doing this 
+without the new hooks introduced by later version of Webform 3.x. So, 
+you might as well just update your webform module to the latest version.</p> </div></div></div>  </div>
+
+  
+  <div id="comments" class="comment-wrapper">
+          <h2 class="title">Comments</h2>
+      
+  <a id="comment-86"></a>
+<div class="comment comment-by-anonymous clearfix" about="/comment/86#comment-86" typeof="sioc:Post sioct:Comment">
+
+  <div class="attribution">
+
+    
+    <div class="submitted">
+      <p class="commenter-name">
+        <span rel="sioc:has_creator"><a href="http://netcamps.com/" rel="nofollow foaf:page" class="username" xml:lang="" typeof="sioc:UserAccount" property="foaf:name" datatype="">RC (not verified)</a></span>      </p>
+      <p class="comment-time">
+        <span property="dc:date dc:created" content="2012-05-28T23:55:39-04:00" datatype="xsd:dateTime">Mon, 05/28/2012 - 23:55</span>      </p>
+      <p class="comment-permalink">
+        <a href="http://tylerfrankenstein.com/comment/86#comment-86" class="permalink" rel="bookmark">Permalink</a>      </p>
+    </div>
+  </div>
+
+  <div class="comment-text">
+    <div class="comment-arrow"></div>
+
+    
+        <h3 property="dc:title" datatype=""><a href="http://tylerfrankenstein.com/comment/86#comment-86" class="permalink" rel="bookmark">This is awesome!  Thanks for</a></h3>
+    
+    <div class="content">
+      <span rel="sioc:reply_of" resource="/code/drupal-webform-submission-results-user-access-control" class="rdf-meta element-hidden"></span><div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>This
+ is awesome!  Thanks for taking the time to post this solution.  Quick 
+question, if you implement this code, the defined user would have access
+ to the webform results reguardless of the user's permissions/role?</p>
+<p>Thanks.</p>
+</div></div></div>          </div> <!-- /.content -->
+
+    <ul class="links inline"><li class="comment-reply first last"><a href="http://tylerfrankenstein.com/comment/reply/81/86">reply</a></li>
+</ul>  </div> <!-- /.comment-text -->
+</div>
+
+<div class="indented"><a id="comment-87"></a>
+<div class="comment comment-by-node-author clearfix" about="/comment/87#comment-87" typeof="sioc:Post sioct:Comment">
+
+  <div class="attribution">
+
+      <div class="user-picture">
+    <a href="http://tylerfrankenstein.com/users/tyler" title="View user profile."><img typeof="foaf:Image" src="Drupal%20Webform%20Submission%20Results%20User%20Access%20Control%20%7C%20Tyler%20Frankenstein_files/picture-1-1471125178.png" alt="tyler's picture" title="tyler's picture"></a>  </div>
+
+    <div class="submitted">
+      <p class="commenter-name">
+        <span rel="sioc:has_creator"><a href="http://tylerfrankenstein.com/users/tyler" title="View user profile." class="username" xml:lang="" about="/users/tyler" typeof="sioc:UserAccount" property="foaf:name" datatype="">tyler</a></span>      </p>
+      <p class="comment-time">
+        <span property="dc:date dc:created" content="2012-05-29T09:09:00-04:00" datatype="xsd:dateTime">Tue, 05/29/2012 - 09:09</span>      </p>
+      <p class="comment-permalink">
+        <a href="http://tylerfrankenstein.com/comment/87#comment-87" class="permalink" rel="bookmark">Permalink</a>      </p>
+    </div>
+  </div>
+
+  <div class="comment-text">
+    <div class="comment-arrow"></div>
+
+    
+        <h3 property="dc:title" datatype=""><a href="http://tylerfrankenstein.com/comment/87#comment-87" class="permalink" rel="bookmark">Correct. The solution above</a></h3>
+    
+    <div class="content">
+      <span rel="sioc:reply_of" resource="/code/drupal-webform-submission-results-user-access-control" class="rdf-meta element-hidden"></span><span rel="sioc:reply_of" resource="/comment/86#comment-86" class="rdf-meta element-hidden"></span><div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"> <p>Correct.
+ The solution above will allow a user (added to the user reference field
+ on the webform content type) to access the webform's results regardless
+ of their permissions/roles, thanks!</p> </div></div></div>          </div> <!-- /.content -->
+
+    <ul class="links inline"><li class="comment-reply first last"><a href="http://tylerfrankenstein.com/comment/reply/81/87">reply</a></li>
+</ul>  </div> <!-- /.comment-text -->
+</div>
+</div><a id="comment-196"></a>
+<div class="comment comment-by-anonymous clearfix" about="/comment/196#comment-196" typeof="sioc:Post sioct:Comment">
+
+  <div class="attribution">
+
+    
+    <div class="submitted">
+      <p class="commenter-name">
+        <span rel="sioc:has_creator"><span class="username" xml:lang="" typeof="sioc:UserAccount" property="foaf:name" datatype="">Graham (not verified)</span></span>      </p>
+      <p class="comment-time">
+        <span property="dc:date dc:created" content="2013-01-11T11:21:44-05:00" datatype="xsd:dateTime">Fri, 01/11/2013 - 11:21</span>      </p>
+      <p class="comment-permalink">
+        <a href="http://tylerfrankenstein.com/comment/196#comment-196" class="permalink" rel="bookmark">Permalink</a>      </p>
+    </div>
+  </div>
+
+  <div class="comment-text">
+    <div class="comment-arrow"></div>
+
+    
+        <h3 property="dc:title" datatype=""><a href="http://tylerfrankenstein.com/comment/196#comment-196" class="permalink" rel="bookmark">Very nice! For Drupal 7 I had</a></h3>
+    
+    <div class="content">
+      <span rel="sioc:reply_of" resource="/code/drupal-webform-submission-results-user-access-control" class="rdf-meta element-hidden"></span><div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Very nice! For Drupal 7 I had to change:</p>
+<p>&nbsp;</p>
+<pre>foreach($node-&gt;field_webform_results_access as $user_reference) {
+    if ($user_reference['uid'] == $account-&gt;uid) {</pre><p>to</p>
+<p>&nbsp;</p>
+<pre>$field = field_view_field('node', $node, 'field_webform_results_access');
+foreach($field as $user_reference) {
+    if ($user_reference['target_id'] == $account-&gt;uid) {</pre><p>and then it worked just fine!</p>
+</div></div></div>          </div> <!-- /.content -->
+
+    <ul class="links inline"><li class="comment-reply first last"><a href="http://tylerfrankenstein.com/comment/reply/81/196">reply</a></li>
+</ul>  </div> <!-- /.comment-text -->
+</div>
+
+<div class="indented"><a id="comment-197"></a>
+<div class="comment comment-by-node-author clearfix" about="/comment/197#comment-197" typeof="sioc:Post sioct:Comment">
+
+  <div class="attribution">
+
+      <div class="user-picture">
+    <a href="http://tylerfrankenstein.com/users/tyler" title="View user profile."><img typeof="foaf:Image" src="Drupal%20Webform%20Submission%20Results%20User%20Access%20Control%20%7C%20Tyler%20Frankenstein_files/picture-1-1471125178.png" alt="tyler's picture" title="tyler's picture"></a>  </div>
+
+    <div class="submitted">
+      <p class="commenter-name">
+        <span rel="sioc:has_creator"><a href="http://tylerfrankenstein.com/users/tyler" title="View user profile." class="username" xml:lang="" about="/users/tyler" typeof="sioc:UserAccount" property="foaf:name" datatype="">tyler</a></span>      </p>
+      <p class="comment-time">
+        <span property="dc:date dc:created" content="2013-01-11T13:26:18-05:00" datatype="xsd:dateTime">Fri, 01/11/2013 - 13:26</span>      </p>
+      <p class="comment-permalink">
+        <a href="http://tylerfrankenstein.com/comment/197#comment-197" class="permalink" rel="bookmark">Permalink</a>      </p>
+    </div>
+  </div>
+
+  <div class="comment-text">
+    <div class="comment-arrow"></div>
+
+    
+        <h3 property="dc:title" datatype=""><a href="http://tylerfrankenstein.com/comment/197#comment-197" class="permalink" rel="bookmark">Thank you for the note about</a></h3>
+    
+    <div class="content">
+      <span rel="sioc:reply_of" resource="/code/drupal-webform-submission-results-user-access-control" class="rdf-meta element-hidden"></span><span rel="sioc:reply_of" resource="/comment/196#comment-196" class="rdf-meta element-hidden"></span><div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Thank you for the note about Drupal 7. I will be trying this soon as I migrate a giant site from D6 to D7!</p>
+</div></div></div>          </div> <!-- /.content -->
+
+    <ul class="links inline"><li class="comment-reply first last"><a href="http://tylerfrankenstein.com/comment/reply/81/197">reply</a></li>
+</ul>  </div> <!-- /.comment-text -->
+</div>
+<a id="comment-247"></a>
+<div class="comment comment-by-node-author clearfix" about="/comment/247#comment-247" typeof="sioc:Post sioct:Comment">
+
+  <div class="attribution">
+
+      <div class="user-picture">
+    <a href="http://tylerfrankenstein.com/users/tyler" title="View user profile."><img typeof="foaf:Image" src="Drupal%20Webform%20Submission%20Results%20User%20Access%20Control%20%7C%20Tyler%20Frankenstein_files/picture-1-1471125178.png" alt="tyler's picture" title="tyler's picture"></a>  </div>
+
+    <div class="submitted">
+      <p class="commenter-name">
+        <span rel="sioc:has_creator"><a href="http://tylerfrankenstein.com/users/tyler" title="View user profile." class="username" xml:lang="" about="/users/tyler" typeof="sioc:UserAccount" property="foaf:name" datatype="">tyler</a></span>      </p>
+      <p class="comment-time">
+        <span property="dc:date dc:created" content="2013-03-11T13:59:25-04:00" datatype="xsd:dateTime">Mon, 03/11/2013 - 13:59</span>      </p>
+      <p class="comment-permalink">
+        <a href="http://tylerfrankenstein.com/comment/247#comment-247" class="permalink" rel="bookmark">Permalink</a>      </p>
+    </div>
+  </div>
+
+  <div class="comment-text">
+    <div class="comment-arrow"></div>
+
+    
+        <h3 property="dc:title" datatype=""><a href="http://tylerfrankenstein.com/comment/247#comment-247" class="permalink" rel="bookmark">Unfortunately this didn't</a></h3>
+    
+    <div class="content">
+      <span rel="sioc:reply_of" resource="/code/drupal-webform-submission-results-user-access-control" class="rdf-meta element-hidden"></span><span rel="sioc:reply_of" resource="/comment/196#comment-196" class="rdf-meta element-hidden"></span><div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Unfortunately
+ this didn't work for me in Drupal 7. However, I just needed to make a 
+slight adjustement to get it to work in D7. I've updated the post above 
+with instructions on how to accomplish this in D7.</p>
+</div></div></div>          </div> <!-- /.content -->
+
+    <ul class="links inline"><li class="comment-reply first last"><a href="http://tylerfrankenstein.com/comment/reply/81/247">reply</a></li>
+</ul>  </div> <!-- /.comment-text -->
+</div>
+</div><a id="comment-240"></a>
+<div class="comment comment-by-anonymous clearfix" about="/comment/240#comment-240" typeof="sioc:Post sioct:Comment">
+
+  <div class="attribution">
+
+    
+    <div class="submitted">
+      <p class="commenter-name">
+        <span rel="sioc:has_creator"><span class="username" xml:lang="" typeof="sioc:UserAccount" property="foaf:name" datatype="">Bronwyn (not verified)</span></span>      </p>
+      <p class="comment-time">
+        <span property="dc:date dc:created" content="2013-03-07T11:14:28-05:00" datatype="xsd:dateTime">Thu, 03/07/2013 - 11:14</span>      </p>
+      <p class="comment-permalink">
+        <a href="http://tylerfrankenstein.com/comment/240#comment-240" class="permalink" rel="bookmark">Permalink</a>      </p>
+    </div>
+  </div>
+
+  <div class="comment-text">
+    <div class="comment-arrow"></div>
+
+    
+        <h3 property="dc:title" datatype=""><a href="http://tylerfrankenstein.com/comment/240#comment-240" class="permalink" rel="bookmark">Hi Tyler,Thanks for this post</a></h3>
+    
+    <div class="content">
+      <span rel="sioc:reply_of" resource="/code/drupal-webform-submission-results-user-access-control" class="rdf-meta element-hidden"></span><div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Hi Tyler,</p>
+<p>Thanks for this post !&nbsp; This seems to be what I'm looking for 
+but forgive me for asking a dumb question... how this is implemented? I 
+assume&nbsp; one would create a module, which I did but where would the 
+"user reference field" show up?</p>
+<p>Sorry if I'm missing&nbsp; something obvious.</p>
+<p>I'm using Drupal 7 and the latest version of webform.</p>
+<p>-Thanks.&nbsp;</p>
+</div></div></div>          </div> <!-- /.content -->
+
+    <ul class="links inline"><li class="comment-reply first last"><a href="http://tylerfrankenstein.com/comment/reply/81/240">reply</a></li>
+</ul>  </div> <!-- /.comment-text -->
+</div>
+
+<div class="indented"><a id="comment-241"></a>
+<div class="comment comment-by-node-author clearfix" about="/comment/241#comment-241" typeof="sioc:Post sioct:Comment">
+
+  <div class="attribution">
+
+      <div class="user-picture">
+    <a href="http://tylerfrankenstein.com/users/tyler" title="View user profile."><img typeof="foaf:Image" src="Drupal%20Webform%20Submission%20Results%20User%20Access%20Control%20%7C%20Tyler%20Frankenstein_files/picture-1-1471125178.png" alt="tyler's picture" title="tyler's picture"></a>  </div>
+
+    <div class="submitted">
+      <p class="commenter-name">
+        <span rel="sioc:has_creator"><a href="http://tylerfrankenstein.com/users/tyler" title="View user profile." class="username" xml:lang="" about="/users/tyler" typeof="sioc:UserAccount" property="foaf:name" datatype="">tyler</a></span>      </p>
+      <p class="comment-time">
+        <span property="dc:date dc:created" content="2013-03-07T12:43:18-05:00" datatype="xsd:dateTime">Thu, 03/07/2013 - 12:43</span>      </p>
+      <p class="comment-permalink">
+        <a href="http://tylerfrankenstein.com/comment/241#comment-241" class="permalink" rel="bookmark">Permalink</a>      </p>
+    </div>
+  </div>
+
+  <div class="comment-text">
+    <div class="comment-arrow"></div>
+
+    
+        <h3 property="dc:title" datatype=""><a href="http://tylerfrankenstein.com/comment/241#comment-241" class="permalink" rel="bookmark">Hi Bronwyn, you need to add a</a></h3>
+    
+    <div class="content">
+      <span rel="sioc:reply_of" resource="/code/drupal-webform-submission-results-user-access-control" class="rdf-meta element-hidden"></span><span rel="sioc:reply_of" resource="/comment/240#comment-240" class="rdf-meta element-hidden"></span><div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Hi
+ Bronwyn, you need to add a 'user reference' field to the 'Webform' 
+content type. Then create a custom module to implement those hooks. I 
+haven't yet tried this in Drupal 7, but I'm sure those hooks are still 
+available.</p>
+<p>Then when you add/edit webform nodes, you should see your new 'user 
+reference' field on the form, there you can add/remove users from the 
+field.</p>
+</div></div></div>          </div> <!-- /.content -->
+
+    <ul class="links inline"><li class="comment-reply first last"><a href="http://tylerfrankenstein.com/comment/reply/81/241">reply</a></li>
+</ul>  </div> <!-- /.comment-text -->
+</div>
+
+<div class="indented"><a id="comment-245"></a>
+<div class="comment comment-by-anonymous clearfix" about="/comment/245#comment-245" typeof="sioc:Post sioct:Comment">
+
+  <div class="attribution">
+
+    
+    <div class="submitted">
+      <p class="commenter-name">
+        <span rel="sioc:has_creator"><span class="username" xml:lang="" typeof="sioc:UserAccount" property="foaf:name" datatype="">Bronwyn (not verified)</span></span>      </p>
+      <p class="comment-time">
+        <span property="dc:date dc:created" content="2013-03-11T13:47:45-04:00" datatype="xsd:dateTime">Mon, 03/11/2013 - 13:47</span>      </p>
+      <p class="comment-permalink">
+        <a href="http://tylerfrankenstein.com/comment/245#comment-245" class="permalink" rel="bookmark">Permalink</a>      </p>
+    </div>
+  </div>
+
+  <div class="comment-text">
+    <div class="comment-arrow"></div>
+
+    
+        <h3 property="dc:title" datatype=""><a href="http://tylerfrankenstein.com/comment/245#comment-245" class="permalink" rel="bookmark">Ok, great. Got it.&nbsp; Thanks so</a></h3>
+    
+    <div class="content">
+      <span rel="sioc:reply_of" resource="/code/drupal-webform-submission-results-user-access-control" class="rdf-meta element-hidden"></span><span rel="sioc:reply_of" resource="/comment/241#comment-241" class="rdf-meta element-hidden"></span><div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Ok, great. Got it.&nbsp; Thanks so much!</p>
+</div></div></div>          </div> <!-- /.content -->
+
+    <ul class="links inline"><li class="comment-reply first last"><a href="http://tylerfrankenstein.com/comment/reply/81/245">reply</a></li>
+</ul>  </div> <!-- /.comment-text -->
+</div>
+
+<div class="indented"><a id="comment-246"></a>
+<div class="comment comment-by-node-author clearfix" about="/comment/246#comment-246" typeof="sioc:Post sioct:Comment">
+
+  <div class="attribution">
+
+      <div class="user-picture">
+    <a href="http://tylerfrankenstein.com/users/tyler" title="View user profile."><img typeof="foaf:Image" src="Drupal%20Webform%20Submission%20Results%20User%20Access%20Control%20%7C%20Tyler%20Frankenstein_files/picture-1-1471125178.png" alt="tyler's picture" title="tyler's picture"></a>  </div>
+
+    <div class="submitted">
+      <p class="commenter-name">
+        <span rel="sioc:has_creator"><a href="http://tylerfrankenstein.com/users/tyler" title="View user profile." class="username" xml:lang="" about="/users/tyler" typeof="sioc:UserAccount" property="foaf:name" datatype="">tyler</a></span>      </p>
+      <p class="comment-time">
+        <span property="dc:date dc:created" content="2013-03-11T13:58:24-04:00" datatype="xsd:dateTime">Mon, 03/11/2013 - 13:58</span>      </p>
+      <p class="comment-permalink">
+        <a href="http://tylerfrankenstein.com/comment/246#comment-246" class="permalink" rel="bookmark">Permalink</a>      </p>
+    </div>
+  </div>
+
+  <div class="comment-text">
+    <div class="comment-arrow"></div>
+
+    
+        <h3 property="dc:title" datatype=""><a href="http://tylerfrankenstein.com/comment/246#comment-246" class="permalink" rel="bookmark">No problem. I just updated</a></h3>
+    
+    <div class="content">
+      <span rel="sioc:reply_of" resource="/code/drupal-webform-submission-results-user-access-control" class="rdf-meta element-hidden"></span><span rel="sioc:reply_of" resource="/comment/245#comment-245" class="rdf-meta element-hidden"></span><div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>No problem. I just updated this post to show how it is done in Drupal 7.</p>
+</div></div></div>          </div> <!-- /.content -->
+
+    <ul class="links inline"><li class="comment-reply first last"><a href="http://tylerfrankenstein.com/comment/reply/81/246">reply</a></li>
+</ul>  </div> <!-- /.comment-text -->
+</div>
+</div></div></div><a id="comment-628"></a>
+<div class="comment comment-by-anonymous clearfix" about="/comment/628#comment-628" typeof="sioc:Post sioct:Comment">
+
+  <div class="attribution">
+
+    
+    <div class="submitted">
+      <p class="commenter-name">
+        <span rel="sioc:has_creator"><span class="username" xml:lang="" typeof="sioc:UserAccount" property="foaf:name" datatype="">Ryan (not verified)</span></span>      </p>
+      <p class="comment-time">
+        <span property="dc:date dc:created" content="2013-07-11T16:45:00-04:00" datatype="xsd:dateTime">Thu, 07/11/2013 - 16:45</span>      </p>
+      <p class="comment-permalink">
+        <a href="http://tylerfrankenstein.com/comment/628#comment-628" class="permalink" rel="bookmark">Permalink</a>      </p>
+    </div>
+  </div>
+
+  <div class="comment-text">
+    <div class="comment-arrow"></div>
+
+    
+        <h3 property="dc:title" datatype=""><a href="http://tylerfrankenstein.com/comment/628#comment-628" class="permalink" rel="bookmark">I'm trying to use this code</a></h3>
+    
+    <div class="content">
+      <span rel="sioc:reply_of" resource="/code/drupal-webform-submission-results-user-access-control" class="rdf-meta element-hidden"></span><div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>I'm
+ trying to use this code but not having to much success. I have not made
+ a custom module before but I think I have it. &nbsp;The module showed 
+up and I enabled it. &nbsp;Not sure it is doing anything.</p>
+<p>I created the field to add the users. &nbsp;but the field only shows 
+up when I log in with the admin user. &nbsp;Even if I add the users I 
+want to have results access I don't see any change unless I log in with 
+the main admin account. &nbsp;Is there some permissions thing I'm 
+missing for the module and/or field?</p>
+</div></div></div>          </div> <!-- /.content -->
+
+    <ul class="links inline"><li class="comment-reply first last"><a href="http://tylerfrankenstein.com/comment/reply/81/628">reply</a></li>
+</ul>  </div> <!-- /.comment-text -->
+</div>
+
+<div class="indented"><a id="comment-631"></a>
+<div class="comment comment-by-node-author clearfix" about="/comment/631#comment-631" typeof="sioc:Post sioct:Comment">
+
+  <div class="attribution">
+
+      <div class="user-picture">
+    <a href="http://tylerfrankenstein.com/users/tyler" title="View user profile."><img typeof="foaf:Image" src="Drupal%20Webform%20Submission%20Results%20User%20Access%20Control%20%7C%20Tyler%20Frankenstein_files/picture-1-1471125178.png" alt="tyler's picture" title="tyler's picture"></a>  </div>
+
+    <div class="submitted">
+      <p class="commenter-name">
+        <span rel="sioc:has_creator"><a href="http://tylerfrankenstein.com/users/tyler" title="View user profile." class="username" xml:lang="" about="/users/tyler" typeof="sioc:UserAccount" property="foaf:name" datatype="">tyler</a></span>      </p>
+      <p class="comment-time">
+        <span property="dc:date dc:created" content="2013-07-19T14:36:16-04:00" datatype="xsd:dateTime">Fri, 07/19/2013 - 14:36</span>      </p>
+      <p class="comment-permalink">
+        <a href="http://tylerfrankenstein.com/comment/631#comment-631" class="permalink" rel="bookmark">Permalink</a>      </p>
+    </div>
+  </div>
+
+  <div class="comment-text">
+    <div class="comment-arrow"></div>
+
+    
+        <h3 property="dc:title" datatype=""><a href="http://tylerfrankenstein.com/comment/631#comment-631" class="permalink" rel="bookmark">Hi Ryan, I'd recommend</a></h3>
+    
+    <div class="content">
+      <span rel="sioc:reply_of" resource="/code/drupal-webform-submission-results-user-access-control" class="rdf-meta element-hidden"></span><span rel="sioc:reply_of" resource="/comment/628#comment-628" class="rdf-meta element-hidden"></span><div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Hi
+ Ryan, I'd recommend flushing all of your caches. Also, make sure users 
+are allowed to view the Webform node and that no other access 
+restrictions are in place (from other contributed modules). Feel free to
+ contact me directly and send along a demo account, and maybe I can take
+ a look.</p>
+</div></div></div>          </div> <!-- /.content -->
+
+    <ul class="links inline"><li class="comment-reply first last"><a href="http://tylerfrankenstein.com/comment/reply/81/631">reply</a></li>
+</ul>  </div> <!-- /.comment-text -->
+</div>
+</div><a id="comment-1034"></a>
+<div class="comment comment-by-anonymous clearfix" about="/comment/1034#comment-1034" typeof="sioc:Post sioct:Comment">
+
+  <div class="attribution">
+
+    
+    <div class="submitted">
+      <p class="commenter-name">
+        <span rel="sioc:has_creator"><a href="http://plepe.at/" rel="nofollow foaf:page" class="username" xml:lang="" typeof="sioc:UserAccount" property="foaf:name" datatype="">Plepe (not verified)</a></span>      </p>
+      <p class="comment-time">
+        <span property="dc:date dc:created" content="2014-02-20T04:20:38-05:00" datatype="xsd:dateTime">Thu, 02/20/2014 - 04:20</span>      </p>
+      <p class="comment-permalink">
+        <a href="http://tylerfrankenstein.com/comment/1034#comment-1034" class="permalink" rel="bookmark">Permalink</a>      </p>
+    </div>
+  </div>
+
+  <div class="comment-text">
+    <div class="comment-arrow"></div>
+
+    
+        <h3 property="dc:title" datatype=""><a href="http://tylerfrankenstein.com/comment/1034#comment-1034" class="permalink" rel="bookmark">Hi! That was what I was</a></h3>
+    
+    <div class="content">
+      <span rel="sioc:reply_of" resource="/code/drupal-webform-submission-results-user-access-control" class="rdf-meta element-hidden"></span><div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Hi! That was what I was looking for. Awesome. I created a repository on Github with the code (for Drupal 7.x):</p>
+<p><a href="https://github.com/plepe/drupal_webform_results_access">https://github.com/plepe/drupal_webform_results_access</a></p>
+</div></div></div>          </div> <!-- /.content -->
+
+    <ul class="links inline"><li class="comment-reply first last"><a href="http://tylerfrankenstein.com/comment/reply/81/1034">reply</a></li>
+</ul>  </div> <!-- /.comment-text -->
+</div>
+
+<div class="indented"><a id="comment-1037"></a>
+<div class="comment comment-by-node-author clearfix" about="/comment/1037#comment-1037" typeof="sioc:Post sioct:Comment">
+
+  <div class="attribution">
+
+      <div class="user-picture">
+    <a href="http://tylerfrankenstein.com/users/tyler" title="View user profile."><img typeof="foaf:Image" src="Drupal%20Webform%20Submission%20Results%20User%20Access%20Control%20%7C%20Tyler%20Frankenstein_files/picture-1-1471125178.png" alt="tyler's picture" title="tyler's picture"></a>  </div>
+
+    <div class="submitted">
+      <p class="commenter-name">
+        <span rel="sioc:has_creator"><a href="http://tylerfrankenstein.com/users/tyler" title="View user profile." class="username" xml:lang="" about="/users/tyler" typeof="sioc:UserAccount" property="foaf:name" datatype="">tyler</a></span>      </p>
+      <p class="comment-time">
+        <span property="dc:date dc:created" content="2014-02-20T09:07:53-05:00" datatype="xsd:dateTime">Thu, 02/20/2014 - 09:07</span>      </p>
+      <p class="comment-permalink">
+        <a href="http://tylerfrankenstein.com/comment/1037#comment-1037" class="permalink" rel="bookmark">Permalink</a>      </p>
+    </div>
+  </div>
+
+  <div class="comment-text">
+    <div class="comment-arrow"></div>
+
+    
+        <h3 property="dc:title" datatype=""><a href="http://tylerfrankenstein.com/comment/1037#comment-1037" class="permalink" rel="bookmark">Nicely done! Have you thought</a></h3>
+    
+    <div class="content">
+      <span rel="sioc:reply_of" resource="/code/drupal-webform-submission-results-user-access-control" class="rdf-meta element-hidden"></span><span rel="sioc:reply_of" resource="/comment/1034#comment-1034" class="rdf-meta element-hidden"></span><div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Nicely done! Have you thought about creating a Sandbox repository on drupal.org?</p>
+<p>Then you could eventually submit it as an official module.</p>
+<p>I'd like to help you with this if you'd like. I have a client reqeusting this feature as a module as well. Let me know, thanks!</p>
+</div></div></div>          </div> <!-- /.content -->
+
+    <ul class="links inline"><li class="comment-reply first last"><a href="http://tylerfrankenstein.com/comment/reply/81/1037">reply</a></li>
+</ul>  </div> <!-- /.comment-text -->
+</div>
+</div><a id="comment-1097"></a>
+<div class="comment comment-by-anonymous clearfix" about="/comment/1097#comment-1097" typeof="sioc:Post sioct:Comment">
+
+  <div class="attribution">
+
+    
+    <div class="submitted">
+      <p class="commenter-name">
+        <span rel="sioc:has_creator"><a href="http://plepe.at/" rel="nofollow foaf:page" class="username" xml:lang="" typeof="sioc:UserAccount" property="foaf:name" datatype="">Plepe (not verified)</a></span>      </p>
+      <p class="comment-time">
+        <span property="dc:date dc:created" content="2014-03-14T08:55:28-04:00" datatype="xsd:dateTime">Fri, 03/14/2014 - 08:55</span>      </p>
+      <p class="comment-permalink">
+        <a href="http://tylerfrankenstein.com/comment/1097#comment-1097" class="permalink" rel="bookmark">Permalink</a>      </p>
+    </div>
+  </div>
+
+  <div class="comment-text">
+    <div class="comment-arrow"></div>
+
+    
+        <h3 property="dc:title" datatype=""><a href="http://tylerfrankenstein.com/comment/1097#comment-1097" class="permalink" rel="bookmark">I just read your last message</a></h3>
+    
+    <div class="content">
+      <span rel="sioc:reply_of" resource="/code/drupal-webform-submission-results-user-access-control" class="rdf-meta element-hidden"></span><div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>I just read your last message today. I created a sandbox project on Drupal: <a href="https://drupal.org/sandbox/plepe/2217803">https://drupal.org/sandbox/plepe/2217803</a> . What's your username on drupal? I can add you as maintainer if you want.</p>
+<p>I also added a change: The project is now compatible with the Entity Reference module.</p>
+</div></div></div>          </div> <!-- /.content -->
+
+    <ul class="links inline"><li class="comment-reply first last"><a href="http://tylerfrankenstein.com/comment/reply/81/1097">reply</a></li>
+</ul>  </div> <!-- /.comment-text -->
+</div>
+
+<div class="indented"><a id="comment-1098"></a>
+<div class="comment comment-by-node-author clearfix" about="/comment/1098#comment-1098" typeof="sioc:Post sioct:Comment">
+
+  <div class="attribution">
+
+      <div class="user-picture">
+    <a href="http://tylerfrankenstein.com/users/tyler" title="View user profile."><img typeof="foaf:Image" src="Drupal%20Webform%20Submission%20Results%20User%20Access%20Control%20%7C%20Tyler%20Frankenstein_files/picture-1-1471125178.png" alt="tyler's picture" title="tyler's picture"></a>  </div>
+
+    <div class="submitted">
+      <p class="commenter-name">
+        <span rel="sioc:has_creator"><a href="http://tylerfrankenstein.com/users/tyler" title="View user profile." class="username" xml:lang="" about="/users/tyler" typeof="sioc:UserAccount" property="foaf:name" datatype="">tyler</a></span>      </p>
+      <p class="comment-time">
+        <span property="dc:date dc:created" content="2014-03-14T10:48:44-04:00" datatype="xsd:dateTime">Fri, 03/14/2014 - 10:48</span>      </p>
+      <p class="comment-permalink">
+        <a href="http://tylerfrankenstein.com/comment/1098#comment-1098" class="permalink" rel="bookmark">Permalink</a>      </p>
+    </div>
+  </div>
+
+  <div class="comment-text">
+    <div class="comment-arrow"></div>
+
+    
+        <h3 property="dc:title" datatype=""><a href="http://tylerfrankenstein.com/comment/1098#comment-1098" class="permalink" rel="bookmark">Sure, my user name is: tyler</a></h3>
+    
+    <div class="content">
+      <span rel="sioc:reply_of" resource="/code/drupal-webform-submission-results-user-access-control" class="rdf-meta element-hidden"></span><span rel="sioc:reply_of" resource="/comment/1097#comment-1097" class="rdf-meta element-hidden"></span><div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Sure, my user name is: tyler.frankenstein</p>
+</div></div></div>          </div> <!-- /.content -->
+
+    <ul class="links inline"><li class="comment-reply first last"><a href="http://tylerfrankenstein.com/comment/reply/81/1098">reply</a></li>
+</ul>  </div> <!-- /.comment-text -->
+</div>
+</div><a id="comment-1119"></a>
+<div class="comment comment-by-anonymous clearfix" about="/comment/1119#comment-1119" typeof="sioc:Post sioct:Comment">
+
+  <div class="attribution">
+
+    
+    <div class="submitted">
+      <p class="commenter-name">
+        <span rel="sioc:has_creator"><span class="username" xml:lang="" typeof="sioc:UserAccount" property="foaf:name" datatype="">Batata (not verified)</span></span>      </p>
+      <p class="comment-time">
+        <span property="dc:date dc:created" content="2014-03-22T11:53:54-04:00" datatype="xsd:dateTime">Sat, 03/22/2014 - 11:53</span>      </p>
+      <p class="comment-permalink">
+        <a href="http://tylerfrankenstein.com/comment/1119#comment-1119" class="permalink" rel="bookmark">Permalink</a>      </p>
+    </div>
+  </div>
+
+  <div class="comment-text">
+    <div class="comment-arrow"></div>
+
+    
+        <h3 property="dc:title" datatype=""><a href="http://tylerfrankenstein.com/comment/1119#comment-1119" class="permalink" rel="bookmark">I'm trying so hard, but it</a></h3>
+    
+    <div class="content">
+      <span rel="sioc:reply_of" resource="/code/drupal-webform-submission-results-user-access-control" class="rdf-meta element-hidden"></span><div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>I'm
+ trying so hard, but it isn't working! I've tried "user reference" in 
+the webform node, i've added some users to test, but nothing happens! 
+What am I doing wrong? The code Above was added to webform.module, and i
+ tried plepe module too. None of them worked for me.</p>
+</div></div></div>          </div> <!-- /.content -->
+
+    <ul class="links inline"><li class="comment-reply first last"><a href="http://tylerfrankenstein.com/comment/reply/81/1119">reply</a></li>
+</ul>  </div> <!-- /.comment-text -->
+</div>
+
+<div class="indented"><a id="comment-1124"></a>
+<div class="comment comment-by-node-author clearfix" about="/comment/1124#comment-1124" typeof="sioc:Post sioct:Comment">
+
+  <div class="attribution">
+
+      <div class="user-picture">
+    <a href="http://tylerfrankenstein.com/users/tyler" title="View user profile."><img typeof="foaf:Image" src="Drupal%20Webform%20Submission%20Results%20User%20Access%20Control%20%7C%20Tyler%20Frankenstein_files/picture-1-1471125178.png" alt="tyler's picture" title="tyler's picture"></a>  </div>
+
+    <div class="submitted">
+      <p class="commenter-name">
+        <span rel="sioc:has_creator"><a href="http://tylerfrankenstein.com/users/tyler" title="View user profile." class="username" xml:lang="" about="/users/tyler" typeof="sioc:UserAccount" property="foaf:name" datatype="">tyler</a></span>      </p>
+      <p class="comment-time">
+        <span property="dc:date dc:created" content="2014-03-23T12:20:01-04:00" datatype="xsd:dateTime">Sun, 03/23/2014 - 12:20</span>      </p>
+      <p class="comment-permalink">
+        <a href="http://tylerfrankenstein.com/comment/1124#comment-1124" class="permalink" rel="bookmark">Permalink</a>      </p>
+    </div>
+  </div>
+
+  <div class="comment-text">
+    <div class="comment-arrow"></div>
+
+    
+        <h3 property="dc:title" datatype=""><a href="http://tylerfrankenstein.com/comment/1124#comment-1124" class="permalink" rel="bookmark">This code should (must) go</a></h3>
+    
+    <div class="content">
+      <span rel="sioc:reply_of" resource="/code/drupal-webform-submission-results-user-access-control" class="rdf-meta element-hidden"></span><span rel="sioc:reply_of" resource="/comment/1119#comment-1119" class="rdf-meta element-hidden"></span><div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>This code should (must) go into your custom module.</p>
+<p>Make sure that your User Referience field machine name is used in the custom code.</p>
+</div></div></div>          </div> <!-- /.content -->
+
+    <ul class="links inline"><li class="comment-reply first last"><a href="http://tylerfrankenstein.com/comment/reply/81/1124">reply</a></li>
+</ul>  </div> <!-- /.comment-text -->
+</div>
+</div><a id="comment-1751"></a>
+<div class="comment comment-by-anonymous clearfix" about="/comment/1751#comment-1751" typeof="sioc:Post sioct:Comment">
+
+  <div class="attribution">
+
+    
+    <div class="submitted">
+      <p class="commenter-name">
+        <span rel="sioc:has_creator"><span class="username" xml:lang="" typeof="sioc:UserAccount" property="foaf:name" datatype="">Chandra Raj (not verified)</span></span>      </p>
+      <p class="comment-time">
+        <span property="dc:date dc:created" content="2016-01-27T09:35:45-05:00" datatype="xsd:dateTime">Wed, 01/27/2016 - 09:35</span>      </p>
+      <p class="comment-permalink">
+        <a href="http://tylerfrankenstein.com/comment/1751#comment-1751" class="permalink" rel="bookmark">Permalink</a>      </p>
+    </div>
+  </div>
+
+  <div class="comment-text">
+    <div class="comment-arrow"></div>
+
+    
+        <h3 property="dc:title" datatype=""><a href="http://tylerfrankenstein.com/comment/1751#comment-1751" class="permalink" rel="bookmark">Thanks a lot for your amazing</a></h3>
+    
+    <div class="content">
+      <span rel="sioc:reply_of" resource="/code/drupal-webform-submission-results-user-access-control" class="rdf-meta element-hidden"></span><div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Thanks
+ a lot for your amazing work. I've used it today. It works like a charm.
+ I've tweaked a bit to improve the performance by using 
+&amp;drupal_static(__FUNCTION__);</p>
+</div></div></div>          </div> <!-- /.content -->
+
+    <ul class="links inline"><li class="comment-reply first last"><a href="http://tylerfrankenstein.com/comment/reply/81/1751">reply</a></li>
+</ul>  </div> <!-- /.comment-text -->
+</div>
+<a id="comment-2017"></a>
+<div class="comment comment-by-anonymous clearfix" about="/comment/2017#comment-2017" typeof="sioc:Post sioct:Comment">
+
+  <div class="attribution">
+
+    
+    <div class="submitted">
+      <p class="commenter-name">
+        <span rel="sioc:has_creator"><a href="http://www.plessas.info/" rel="nofollow foaf:page" class="username" xml:lang="" typeof="sioc:UserAccount" property="foaf:name" datatype="">Thanos Plessas (not verified)</a></span>      </p>
+      <p class="comment-time">
+        <span property="dc:date dc:created" content="2016-11-04T11:04:31-04:00" datatype="xsd:dateTime">Fri, 11/04/2016 - 11:04</span>      </p>
+      <p class="comment-permalink">
+        <a href="http://tylerfrankenstein.com/comment/2017#comment-2017" class="permalink" rel="bookmark">Permalink</a>      </p>
+    </div>
+  </div>
+
+  <div class="comment-text">
+    <div class="comment-arrow"></div>
+
+    
+        <h3 property="dc:title" datatype=""><a href="http://tylerfrankenstein.com/comment/2017#comment-2017" class="permalink" rel="bookmark">Very helpful page! It is</a></h3>
+    
+    <div class="content">
+      <span rel="sioc:reply_of" resource="/code/drupal-webform-submission-results-user-access-control" class="rdf-meta element-hidden"></span><div class="field field-name-comment-body field-type-text-long field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><p>Very helpful page! It is useful to denote two things:</p>
+<p>a) If one wants to restrict access to submission (e.g. allow only 
+view and not edit or delete), then it is possible to use the $op 
+argument as already shown in my_module_webform_submission_access() 
+function in the example for older versions of the module.</p>
+<p>b) In case there are several modules setting permissions on results 
+access of a webform, then the webform module treats return values from 
+all functions implementing hook_webform_results_access in such a way 
+that the user has access to the webform results if at least one of them 
+grants him/her with access by returning true (see <a href="https://www.drupal.org/node/2099859">https://www.drupal.org/node/2099859</a>).</p>
+</div></div></div>          </div> <!-- /.content -->
+
+    <ul class="links inline"><li class="comment-reply first last"><a href="http://tylerfrankenstein.com/comment/reply/81/2017">reply</a></li>
+</ul>  </div> <!-- /.comment-text -->
+</div>
+
+      <h2 class="title comment-form">Add new comment</h2>
+    <form class="comment-form user-info-from-cookie user-info-from-cookie-processed" action="/comment/reply/81" method="post" id="comment-form" accept-charset="UTF-8"><div><div class="form-item form-type-textfield form-item-name">
+  <label for="edit-name">Your name <span class="form-required" title="This field is required.">*</span></label>
+ <input id="edit-name" name="name" size="30" maxlength="60" class="form-text required" type="text">
+</div>
+<div class="form-item form-type-textfield form-item-mail">
+  <label for="edit-mail">E-mail <span class="form-required" title="This field is required.">*</span></label>
+ <input id="edit-mail" name="mail" size="30" maxlength="64" class="form-text required" type="text">
+<div class="description">The content of this field is kept private and will not be shown publicly.</div>
+</div>
+<div class="form-item form-type-textfield form-item-homepage">
+  <label for="edit-homepage">Homepage </label>
+ <input id="edit-homepage" name="homepage" size="30" maxlength="255" class="form-text" type="text">
+</div>
+<div class="field-type-text-long field-name-comment-body field-widget-text-textarea form-wrapper" id="edit-comment-body"><div id="comment-body-add-more-wrapper"><div class="text-format-wrapper"><div class="form-item form-type-textarea form-item-comment-body-und-0-value">
+  <label for="edit-comment-body-und-0-value">Comment <span class="form-required" title="This field is required.">*</span></label>
+ <div class="form-textarea-wrapper resizable-textarea"><textarea style="visibility: hidden; display: none;" class="text-full wysiwyg form-textarea required wysiwyg-processed" id="edit-comment-body-und-0-value" name="comment_body[und][0][value]" cols="60" rows="5"></textarea><span id="cke_edit-comment-body-und-0-value" class="cke_skin_kama cke_1 cke_editor_edit-comment-body-und-0-value" dir="ltr" title=" " role="application" aria-labelledby="cke_edit-comment-body-und-0-value_arialbl" style="width: auto;" lang="en"><span id="cke_edit-comment-body-und-0-value_arialbl" class="cke_voice_label">Rich Text Editor</span><span class="cke_browser_gecko" role="presentation"><span class="cke_wrapper cke_ltr" role="presentation"><table class="cke_editor" role="presentation" border="0" cellpadding="0" cellspacing="0"><tbody><tr style="-moz-user-select: none;" role="presentation"><td id="cke_top_edit-comment-body-und-0-value" class="cke_top" role="presentation"><div class="cke_toolbox" role="group" aria-labelledby="cke_6" onmousedown="return false;"><span id="cke_6" class="cke_voice_label">Editor toolbars</span><span id="cke_7" class="cke_toolbar" role="toolbar"><span class="cke_toolbar_start"></span><span class="cke_toolgroup" role="presentation"><span class="cke_button"><a id="cke_8" class="cke_off cke_button_bold" title="Bold" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_8_label" onblur="this.style.cssText = this.style.cssText;" onkeydown="return CKEDITOR.tools.callFunction(4, event);" onfocus="return CKEDITOR.tools.callFunction(5, event);" onclick="CKEDITOR.tools.callFunction(6, this); return false;"><span class="cke_icon">&nbsp;</span><span id="cke_8_label" class="cke_label">Bold</span></a></span><span class="cke_button"><a id="cke_9" class="cke_off cke_button_italic" title="Italic" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_9_label" onblur="this.style.cssText = this.style.cssText;" onkeydown="return CKEDITOR.tools.callFunction(7, event);" onfocus="return CKEDITOR.tools.callFunction(8, event);" onclick="CKEDITOR.tools.callFunction(9, this); return false;"><span class="cke_icon">&nbsp;</span><span id="cke_9_label" class="cke_label">Italic</span></a></span><span class="cke_button"><a id="cke_10" class="cke_off cke_button_bulletedlist" title="Insert/Remove Bulleted List" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_10_label" onblur="this.style.cssText = this.style.cssText;" onkeydown="return CKEDITOR.tools.callFunction(10, event);" onfocus="return CKEDITOR.tools.callFunction(11, event);" onclick="CKEDITOR.tools.callFunction(12, this); return false;"><span class="cke_icon">&nbsp;</span><span id="cke_10_label" class="cke_label">Insert/Remove Bulleted List</span></a></span><span class="cke_button"><a id="cke_11" class="cke_off cke_button_numberedlist" title="Insert/Remove Numbered List" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_11_label" onblur="this.style.cssText = this.style.cssText;" onkeydown="return CKEDITOR.tools.callFunction(13, event);" onfocus="return CKEDITOR.tools.callFunction(14, event);" onclick="CKEDITOR.tools.callFunction(15, this); return false;"><span class="cke_icon">&nbsp;</span><span id="cke_11_label" class="cke_label">Insert/Remove Numbered List</span></a></span><span class="cke_button"><a id="cke_12" class="cke_off cke_button_link" title="Link" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_12_label" onblur="this.style.cssText = this.style.cssText;" onkeydown="return CKEDITOR.tools.callFunction(16, event);" onfocus="return CKEDITOR.tools.callFunction(17, event);" onclick="CKEDITOR.tools.callFunction(18, this); return false;"><span class="cke_icon">&nbsp;</span><span id="cke_12_label" class="cke_label">Link</span></a></span><span class="cke_button"><a id="cke_13" class="cke_off cke_button_blockquote" title="Block Quote" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_13_label" onblur="this.style.cssText = this.style.cssText;" onkeydown="return CKEDITOR.tools.callFunction(19, event);" onfocus="return CKEDITOR.tools.callFunction(20, event);" onclick="CKEDITOR.tools.callFunction(21, this); return false;"><span class="cke_icon">&nbsp;</span><span id="cke_13_label" class="cke_label">Block Quote</span></a></span><span class="cke_button"><a id="cke_14" class="cke_off cke_button_source" title="Source" tabindex="-1" hidefocus="true" role="button" aria-labelledby="cke_14_label" onblur="this.style.cssText = this.style.cssText;" onkeydown="return CKEDITOR.tools.callFunction(22, event);" onfocus="return CKEDITOR.tools.callFunction(23, event);" onclick="CKEDITOR.tools.callFunction(24, this); return false;"><span class="cke_icon">&nbsp;</span><span id="cke_14_label" class="cke_label">Source</span></a></span></span><span class="cke_rcombo" role="presentation"><span id="cke_15" class="cke_format cke_off" role="presentation"><span id="cke_15_label" class="cke_label">Format</span><a hidefocus="true" title="Paragraph Format" tabindex="-1" role="button" aria-labelledby="cke_15_label" aria-describedby="cke_15_text" aria-haspopup="true" onblur="this.style.cssText = this.style.cssText;" onkeydown="CKEDITOR.tools.callFunction( 26, event, this );" onfocus="return CKEDITOR.tools.callFunction(27, event);" onclick="CKEDITOR.tools.callFunction(25, this); return false;"><span><span id="cke_15_text" class="cke_text cke_inline_label">Format</span></span><span class="cke_openbutton"><span class="cke_icon"></span></span></a></span></span><span class="cke_toolbar_end"></span></span></div><a title="Collapse Toolbar" id="cke_16" tabindex="-1" class="cke_toolbox_collapser" onclick="CKEDITOR.tools.callFunction(28)"><span>▲</span></a></td></tr><tr role="presentation"><td id="cke_contents_edit-comment-body-und-0-value" class="cke_contents" style="height:113px" role="presentation"><span id="cke_20" class="cke_voice_label">Press ALT 0 for help</span><iframe style="width:100%;height:100%" aria-describedby="cke_20" title="Rich text editor, edit-comment-body-und-0-value" src="" tabindex="0" allowtransparency="true" frameborder="0"></iframe></td></tr><tr style="-moz-user-select: none;" role="presentation"><td id="cke_bottom_edit-comment-body-und-0-value" class="cke_bottom" role="presentation"><div class="cke_resizer cke_resizer_ltr" title="Drag to resize" onmousedown="CKEDITOR.tools.callFunction(3, event)"></div><span id="cke_path_edit-comment-body-und-0-value_label" class="cke_voice_label">Elements path</span><div id="cke_path_edit-comment-body-und-0-value" class="cke_path" role="group" aria-labelledby="cke_path_edit-comment-body-und-0-value_label"><span class="cke_empty">&nbsp;</span></div></td></tr></tbody></table><style>.cke_skin_kama{visibility:hidden;}</style></span></span></span></div>
+</div>
+<fieldset class="filter-wrapper form-wrapper" id="edit-comment-body-und-0-format"><div class="fieldset-wrapper"><div class="wysiwyg-toggle-wrapper"><a href="javascript:void(0);" id="wysiwyg-toggle-edit-comment-body-und-0-value">Disable rich-text</a></div><div class="filter-help form-wrapper" id="edit-comment-body-und-0-format-help"><p><a href="http://tylerfrankenstein.com/filter/tips" target="_blank">More information about text formats</a></p></div><div class="form-item form-type-select form-item-comment-body-und-0-format">
+  <label for="edit-comment-body-und-0-format--2">Text format </label>
+ <select class="filter-list form-select" id="edit-comment-body-und-0-format--2" name="comment_body[und][0][format]"><option value="visitor_filtered_html" selected="selected">Visitor Filtered HTML</option><option value="plain_text">Plain text</option></select>
+</div>
+<div class="filter-guidelines form-wrapper filter-guidelines-processed" id="edit-comment-body-und-0-format-guidelines"><div style="display: block;" class="filter-guidelines-item filter-guidelines-visitor_filtered_html"><h3 style="display: none;">Visitor Filtered HTML</h3><ul class="tips"><li>Allowed
+ HTML tags: &lt;a&gt; &lt;em&gt; &lt;strong&gt; &lt;cite&gt; 
+&lt;blockquote&gt; &lt;code&gt; &lt;ul&gt; &lt;ol&gt; &lt;li&gt; 
+&lt;dl&gt; &lt;dt&gt; &lt;dd&gt; &lt;pre&gt; &lt;br&gt; &lt;p&gt;</li><li>Lines and paragraphs break automatically.</li><li>Web page addresses and e-mail addresses turn into links automatically.</li></ul></div><div style="display: none;" class="filter-guidelines-item filter-guidelines-plain_text"><h3 style="display: none;">Plain text</h3><ul class="tips"><li>No HTML tags allowed.</li><li>Web page addresses and e-mail addresses turn into links automatically.</li><li>Lines and paragraphs break automatically.</li></ul></div></div></div></fieldset>
+</div>
+</div></div><input name="form_build_id" value="form-GyBxprCDeOL6kJOmAxo5pMGRb9R9y_tZIewwrtoWqu8" type="hidden">
+<input name="form_id" value="comment_node_page_form" type="hidden">
+<input name="honeypot_time" value="1484734846|eW1WdLr6cYKcPN6v9__B9BuBRnl0IHf4PYpQn431XN0" type="hidden">
+<input class="mollom-content-id" name="mollom[contentId]" value="" type="hidden">
+<input class="mollom-captcha-id" name="mollom[captchaId]" value="170118b61904b1dd93" type="hidden">
+<div class="form-item form-type-textfield form-item-mollom-captcha">
+  <label for="edit-mollom-captcha">Verification <span class="form-required" title="This field is required.">*</span></label>
+ <span class="field-prefix">
+<span class="mollom-captcha-container">
+  <a href="javascript:void(0);" class="mollom-refresh-captcha mollom-refresh-image"><img typeof="foaf:Image" src="Drupal%20Webform%20Submission%20Results%20User%20Access%20Control%20%7C%20Tyler%20Frankenstein_files/refresh.png" alt="Refresh"></a>
+  <span class="mollom-captcha-content mollom-image-captcha"><img typeof="foaf:Image" src="Drupal%20Webform%20Submission%20Results%20User%20Access%20Control%20%7C%20Tyler%20Frankenstein_files/170118b61904b1dd93.png" alt="Type the characters you see in this picture."></span>
+  <span class="mollom-image-captcha-instructions">Type the characters 
+you see in the picture; if you can't read them, submit the form and a 
+new image will be generated. Not case sensitive.&nbsp;&nbsp;<a href="#" class="mollom-switch-captcha mollom-audio-captcha">Switch to audio verification.</a></span>
+</span>
+</span> <input title="Enter the characters from the verification above." id="edit-mollom-captcha" name="mollom[captcha]" size="10" maxlength="128" class="form-text required" type="text">
+</div>
+<div style="display: none;"><div class="form-item form-type-textfield form-item-mollom-homepage">
+  <label for="edit-mollom-homepage">Home page </label>
+ <input autocomplete="off" id="edit-mollom-homepage" name="mollom[homepage]" size="60" maxlength="128" class="form-text" type="text">
+</div>
+</div><div class="url-textfield"><div class="form-item form-type-textfield form-item-url">
+  <label for="edit-url">Leave this field blank </label>
+ <input autocomplete="off" id="edit-url" name="url" size="20" maxlength="128" class="form-text" type="text">
+</div>
+</div><div class="form-actions form-wrapper" id="edit-actions"><input id="edit-submit" name="op" value="Save" class="form-submit" type="submit"></div></div></form>  </div>
+
+</div>
+  </div>
+</div>
+  </div>
+                                
+            </div>
+        
+        </div><!-- /#content -->
+        
+                
+        <div class="clear"></div>
+        
+                <!-- #featured -->
+        <div id="featured" class="sixteen columns clearfix">
+            
+                        <div class="one_half">
+              <div class="region region-featured-left">
+    <div id="block-views-featured-articles-block" class="block block-views">
+
+    <h2>Featured Articles</h2>
+  
+  <div class="content">
+    <div class="view view-featured-articles view-id-featured_articles view-display-id-block view-dom-id-acaf89ef63e2cf3808a3b4b4eddb7598">
+        
+  
+  
+      <div class="view-content">
+      <table class="views-table cols-0">
+       <tbody>
+          <tr class="odd views-row-first">
+                  <td class="views-field views-field-title">
+            <a href="http://tylerfrankenstein.com/code/headless-drupal-web-app-angular-js-and-drupalgap">Headless Drupal Web App with Angular JS and DrupalGap</a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title">
+            <a href="http://tylerfrankenstein.com/code/headless-drupal-angular-js-bootstrap">Headless Drupal with Angular JS and Bootstrap - Hello World</a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title">
+            <a href="http://tylerfrankenstein.com/code/build-mobile-app-sell-products-with-drupal">Build a Mobile App to Sell Products with Drupal</a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title">
+            <a href="http://tylerfrankenstein.com/code/build-mobile-app-geo-tag-photo">Build a Mobile App to Geo Tag a Photo</a>          </td>
+              </tr>
+          <tr class="odd views-row-last">
+                  <td class="views-field views-field-title">
+            <a href="http://tylerfrankenstein.com/code/build-pebble-application-record-geo-position-drupal">Build a Pebble Application to Record a Geo Location in Drupal</a>          </td>
+              </tr>
+      </tbody>
+</table>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+</div>
+  </div>
+            </div>
+            
+            <div class="one_half last">
+              <div class="region region-featured-right">
+    <div id="block-views-recently-updated-code-block" class="block block-views">
+
+    <h2>Recently Updated Code</h2>
+  
+  <div class="content">
+    <div class="view view-recently-updated-code view-id-recently_updated_code view-display-id-block view-dom-id-5c36b58397b58beb7567d3066440e5f8">
+        
+  
+  
+      <div class="view-content">
+      <table class="views-table cols-0">
+       <tbody>
+          <tr class="odd views-row-first">
+                  <td class="views-field views-field-title">
+            <a href="http://tylerfrankenstein.com/code/drupaladdjs-setting-example">Drupal Add JavaScript Setting Example</a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title">
+            <a href="http://tylerfrankenstein.com/code/build-mobile-app-sell-products-with-drupal">Build a Mobile App to Sell Products with Drupal</a>          </td>
+              </tr>
+          <tr class="odd">
+                  <td class="views-field views-field-title">
+            <a href="http://tylerfrankenstein.com/code/drupal-8-batch-example">Drupal 8 Batch Example</a>          </td>
+              </tr>
+          <tr class="even">
+                  <td class="views-field views-field-title">
+            <a href="http://tylerfrankenstein.com/code/tuxguitar-better-sound-ubuntu">TuxGuitar with Better Sound in Ubuntu</a>          </td>
+              </tr>
+          <tr class="odd views-row-last">
+                  <td class="views-field views-field-title">
+            <a href="http://tylerfrankenstein.com/code/use-drush-export-import-drupal-mysql-database-dump-file">Use Drush to Export/Import a Drupal MySQL Database Dump File</a>          </td>
+              </tr>
+      </tbody>
+</table>
+    </div>
+  
+  
+  
+  
+  
+  
+</div>  </div>
+</div>
+  </div>
+            </div>
+                        
+        </div><!-- /#featured -->
+                
+	</div>
+        
+	<div id="footer">
+        <div class="container">
+        	<div class="sixteen columns clearfix">
+        
+                <div class="one_third">
+                  <div class="region region-footer-first">
+    <div id="block-menu-menu-footer" class="block block-menu">
+
+    <h2>Additional Resources</h2>
+  
+  <div class="content">
+    <ul class="menu"><li class="first leaf"><a href="http://www.easystreet3.com/request-quote" title="Need some work done? Please request a quote from Easy Street 3!">Hire</a></li>
+<li class="leaf"><a href="http://tylerfrankenstein.com/contact" title="Contact Tyler Frankenstein">Contact</a></li>
+<li class="leaf"><a href="http://resume.github.io/?signalpoint" title="View my Résume for github.com">GitHub Résume</a></li>
+<li class="leaf"><a href="http://tylerfrankenstein.com/about" title="Other Odds and Ends">About</a></li>
+<li class="last leaf"><a href="http://www.linkedin.com/in/tylerfrankenstein/" title="My LinkedIn Profile">LinkedIn</a></li>
+</ul>  </div>
+</div>
+  </div>
+                </div>
+                
+                <div class="one_third">
+                  <div class="region region-footer-second">
+    <div id="block-comment-recent" class="block block-comment">
+
+    <h2>Recent comments</h2>
+  
+  <div class="content">
+    <div class="item-list"><ul><li class="first"><a href="http://tylerfrankenstein.com/comment/2085#comment-2085">Hi Tonny,</a>&nbsp;<span>2 weeks 6 days ago</span></li>
+<li><a href="http://tylerfrankenstein.com/comment/2082#comment-2082">Hi!</a>&nbsp;<span>3 weeks 2 days ago</span></li>
+<li><a href="http://tylerfrankenstein.com/comment/2056#comment-2056">It means that timidity is</a>&nbsp;<span>1 month 3 weeks ago</span></li>
+<li><a href="http://tylerfrankenstein.com/comment/2055#comment-2055">The module is still supported</a>&nbsp;<span>1 month 3 weeks ago</span></li>
+<li><a href="http://tylerfrankenstein.com/comment/2054#comment-2054">Is the Angular-Drupal module</a>&nbsp;<span>1 month 3 weeks ago</span></li>
+<li><a href="http://tylerfrankenstein.com/comment/2046#comment-2046">Yes, the Address Field module</a>&nbsp;<span>2 months 19 hours ago</span></li>
+<li><a href="http://tylerfrankenstein.com/comment/2045#comment-2045">Just to clarify me previous</a>&nbsp;<span>2 months 20 hours ago</span></li>
+<li><a href="http://tylerfrankenstein.com/comment/2044#comment-2044">Thanks for the prompt reply,</a>&nbsp;<span>2 months 21 hours ago</span></li>
+<li><a href="http://tylerfrankenstein.com/comment/2040#comment-2040">Hi, I was going through your</a>&nbsp;<span>2 months 4 days ago</span></li>
+<li class="last"><a href="http://tylerfrankenstein.com/comment/2039#comment-2039">Definitely.</a>&nbsp;<span>2 months 4 days ago</span></li>
+</ul></div>  </div>
+</div>
+  </div>
+                </div>
+                
+                <div class="one_third last">
+                  <div class="region region-footer-third">
+    <div id="block-user-login" class="block block-user">
+
+    <h2>User login</h2>
+  
+  <div class="content">
+    <form action="/code/drupal-webform-submission-results-user-access-control?destination=node/81" method="post" id="user-login-form" accept-charset="UTF-8"><div><div class="form-item form-type-textfield form-item-name">
+  <label for="edit-name--2">Username <span class="form-required" title="This field is required.">*</span></label>
+ <input id="edit-name--2" name="name" size="15" maxlength="60" class="form-text required" type="text">
+</div>
+<div class="form-item form-type-password form-item-pass">
+  <label for="edit-pass">Password <span class="form-required" title="This field is required.">*</span></label>
+ <input id="edit-pass" name="pass" size="15" maxlength="128" class="form-text required" type="password">
+</div>
+<div class="item-list"><ul><li class="first last"><a href="http://tylerfrankenstein.com/user/password" title="Request new password via e-mail.">Request new password</a></li>
+</ul></div><input name="form_build_id" value="form-28XZqklnvmGfNAAvS6IDQcy738LQq5GqNqb3I5S0Tn4" type="hidden">
+<input name="form_id" value="user_login_block" type="hidden">
+<div class="form-actions form-wrapper" id="edit-actions--3"><input id="edit-submit--3" name="op" value="Log in" class="form-submit" type="submit"></div></div></form>  </div>
+</div>
+  </div>
+                </div>
+        
+                <div class="clear"></div>
+                
+                  <div class="region region-footer">
+    <div id="block-system-powered-by" class="block block-system">
+
+    
+  <div class="content">
+    <span>Powered by <a href="https://www.drupal.org/">Drupal</a></span>  </div>
+</div>
+  </div>
+                
+                <div class="clear"></div>
+                
+        	</div>
+        </div>
+    </div>
+    
+</div> <!-- /#wrap -->
+  <script type="text/javascript" src="Drupal%20Webform%20Submission%20Results%20User%20Access%20Control%20%7C%20Tyler%20Frankenstein_files/js_sGIAwFMyk_DCkRuKFDv1jd_83Xc2oy7JCskLxsMI0j4.js"></script>
+
+
+</body></html>

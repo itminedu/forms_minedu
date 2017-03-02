@@ -51,15 +51,8 @@ function cas_attributes_cas_user_presave(&$edit, $account) {
     return;
   }
 
-  cas_attributes_map_fields($edit, $account);
-  cas_attributes_map_roles($edit, $account);
-}
-
-/**
- * Map fields to the pre-defined CAS and LDAP tokens.
- */
-function cas_attributes_map_fields(&$edit, $account) {
   $data = array('cas' => $edit['cas_user']['name']);
+
   // Set each drupal field to its mapped attribute.
   $overwrite = variable_get('cas_attributes_overwrite', TRUE);
   foreach (variable_get('cas_attributes_relations', array()) as $drupal_field => $text) {
@@ -82,28 +75,14 @@ function cas_attributes_map_fields(&$edit, $account) {
       }
     }
   }
-}
 
-/**
- * Map roles to the pre-defined CAS or LDAP attributes.
- */
-function cas_attributes_map_roles(&$edit, $account) {
-  $data = array('cas' => $edit['cas_user']['name']);
+  // Manage Roles
 
   // Make sure there are attributes to check.
   $mapping = variable_get('cas_attributes_roles_mapping', '');
   if (!empty($mapping)) {
-    // Get the users attributes, either via CAS or LDAP
-    $attribute_matching_type = variable_get('cas_attributes_roles_cas_or_ldap', 'cas');
-
-    if (module_exists('cas_ldap') && $attribute_matching_type == 'ldap') {
-      $user_attributes = cas_ldap_attributes($data['cas']);
-    }
-    else {
-      // If nothing has been specified (e.g. because of a module upgrade) use CAS.
-      $user_attributes = cas_phpcas_attributes($data['cas']);
-    }
-
+    // Get the users attributes.
+    $user_attributes = cas_phpcas_attributes($data['cas']);
     // Allow other modules to manipulate the attribute values.
     // Can't use module_invoke_all() because we need to pass byref.
     $arguments = array(&$user_attributes);
@@ -112,10 +91,9 @@ function cas_attributes_map_roles(&$edit, $account) {
       call_user_func_array($function, $arguments);
     }
 
-    // Build all the attributes to check.
-    $attributes_to_check = preg_split("#\r\n|\n|\r#", $mapping);
+    // Build all the attirbutes to check.
     $cas_user_roles = array();
-
+    $attributes_to_check = explode("\n", trim($mapping));
     foreach ($attributes_to_check as $attribute) {
       $attribute = trim($attribute);
       if (!empty($user_attributes[$attribute])) {

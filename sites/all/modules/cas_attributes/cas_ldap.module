@@ -78,16 +78,12 @@ function _cas_ldap_attributes($name) {
   $ldap_server = ldap_servers_get_servers($cas_attr_ldap_server, 'enabled', TRUE);
   if (empty($ldap_server)) {
     // We cannot load the server.
-    return array();
+    return;
   }
 
   // Connect to the server and perform the lookup.
   $ldap_server->connect();
   $ldap_server->bind();
   $result = $ldap_server->user_lookup($name);
-  if ($result) {
-    return $result['attr'];
-  } else {
-    return array();
-  }
+  return $result['attr'];
 }
