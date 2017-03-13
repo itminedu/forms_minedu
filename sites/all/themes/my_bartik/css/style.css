@@ -299,7 +299,7 @@ ul.tips {
 #name-and-slogan {
   float: left; /* LTR */
   padding-top: 34px;
-  margin: 0 0 30px 15px; /* LTR */
+  margin: 0 0 30px 14px; /* LTR */
 }
 #site-name {
   font-size: 1.1em;
